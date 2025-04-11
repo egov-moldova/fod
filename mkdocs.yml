@@ -16,6 +16,6 @@ nav:
   - Componente:
       - Prezentare generală: componente/index.md
   - Servicii:
-      - Prezentare generală: servicii/index.md
+      - ICurrentUserContextService: servicii/ICurrentUserContextService.md
   - Modele:
       - Prezentare generală: modele/index.md
