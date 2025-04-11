@@ -20,6 +20,7 @@ nav:
       - Badge: componente/FodBadge.md
       - Button: componente/FodButton.md
       - Button Group: componente/FodButtonGroup.md
+      - Icon Button: componente/FodIconButton.md
   - Servicii:
       - ICurrentUserContextService: servicii/ICurrentUserContextService.md
   - Modele:
