@@ -12,9 +12,14 @@ nav:
       - Utilizarea stilurilor FOD: aplicatia/utilizarea stilurilor fod.md
       - Înregistrarea serviciilor client: aplicatia/inregistrarea serviciilor client.md
   - Configurare Fod:
-      - Prezentare generală: configurare/index.md
+      - Roluri și context implicite: configurare/roluri implicite.md
+      - Configurare roluri implicite: configurare/configurare roluri implicite.md
+      - MPass: configurare/mpass.md
+      - Limbile disponibile: configurare/configurare limbilor disponibile.md
   - Componente:
-      - Prezentare generală: componente/index.md
+      - Badge: componente/FodBadge.md
+      - Button: componente/FodButton.md
+      - Button Group: componente/FodButtonGroup.md
   - Servicii:
       - ICurrentUserContextService: servicii/ICurrentUserContextService.md
   - Modele:
