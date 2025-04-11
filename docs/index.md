@@ -1,3 +1,2 @@
 # Welcome to Fod
-
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+👉 [Vezi Documentația FOD](https://egov-moldova.github.io/fod/site/)
