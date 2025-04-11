@@ -1,0 +1,16 @@
+site_name: Fod Documentation
+theme:
+  name: material
+
+nav:
+  - Acasă: index.md
+  - Configurare Fod:
+      - Prezentare generală: configurare/index.md
+  - Componente:
+      - Prezentare generală: componente/index.md
+  - Servicii:
+      - Prezentare generală: servicii/index.md
+  - Modele:
+      - Prezentare generală: modele/index.md
+  - Aplicația Fod:
+      - Prezentare generală: aplicatia/index.md
