@@ -4,6 +4,13 @@ theme:
 
 nav:
   - Acasă: index.md
+  - Aplicația Fod:
+      - Introducere: aplicatia/index.md
+      - Crearea soluției: aplicatia/solution create.md
+      - Creare proiect Frontoffice: aplicatia/creare proiect frontoffice.md
+      - Instalare librarii fod: aplicatia/instalare librarii fod.md
+      - Utilizarea stilurilor FOD: aplicatia/utilizarea stilurilor fod.md
+      - Înregistrarea serviciilor client: aplicatia/inregistrarea serviciilor client.md
   - Configurare Fod:
       - Prezentare generală: configurare/index.md
   - Componente:
@@ -12,5 +19,3 @@ nav:
       - Prezentare generală: servicii/index.md
   - Modele:
       - Prezentare generală: modele/index.md
-  - Aplicația Fod:
-      - Prezentare generală: aplicatia/index.md
