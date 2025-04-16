@@ -22,7 +22,17 @@ nav:
       - Button: componente/FodButton.md
       - Button Group: componente/FodButtonGroup.md
       - Icon Button: componente/FodIconButton.md
+      - Chips: componente/FodChip.md
+      - ChipSet: componente/FodChipSet.md
+      - CheckBox2: componente/FodCheckBox2.md
+      - DatePicker: componente/FodDatePicker.md
+      - Layout: componente/FodLayout.md
+      - Footer: componente/FodFooter.md
+      - Wizard: componente/FodWizard.md
+  - Componente business:
+      - Afișarea costului: componente/bussiness/FodRequestCost.md
+
   - Servicii:
       - ICurrentUserContextService: servicii/ICurrentUserContextService.md
   - Modele:
-      - Prezentare generală: modele/index.md
+      - UserContext: modele/UserContext.md
