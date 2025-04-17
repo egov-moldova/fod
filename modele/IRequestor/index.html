@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="../UserContext/">
+      
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +18,7 @@
     
     
       
-        <title>Documentație pentru Interfața IRequestor - Fod Documentation</title>
+        <title>FodRequestorModel - Fod Documentation</title>
       
     
     
@@ -94,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Documentație pentru Interfața IRequestor
+              FodRequestorModel
             
           </span>
         </div>
@@ -1032,18 +1034,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -1059,7 +1063,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Modele
@@ -1093,10 +1097,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../FodRequestorModel/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    FodRequestorModel
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1107,6 +1133,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descriere-generala" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriere Generală
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proprietati" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proprietăți
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enum-onbehalfonenum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enum: OnBehalfOnEnum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observatii" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observații
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1199,7 +1281,7 @@
 
 <h1 id="documentatie-pentru-interfata-irequestor">Documentație pentru Interfața <code>IRequestor</code></h1>
 <h2 id="descriere-generala">Descriere Generală</h2>
-<p><code>IRequestor</code> este o interfață care definește structura de bază a unui solicitant (persoană fizică sau juridică) utilizat în cadrul aplicațiilor FOD. Aceasta oferă toate atributele necesare pentru identificarea și contactarea solicitantului, precum și detalii despre modul în care acesta acționează (în nume propriu sau în numele altei entități).</p>
+<p><code>IRequestor</code> este o interfață care definește structura de bază a unui solicitant (persoană fizică sau juridică) utilizat în cadrul aplicațiilor FOD. Aceasta oferă toate atributele necesare pentru identificarea și contactarea solicitantului, precum și detalii despre modul înce care acesta acționează (în nume propriu sau în numele altei entități).</p>
 <hr />
 <h2 id="proprietati">Proprietăți</h2>
 <table>
@@ -1308,6 +1390,118 @@
 <li>Această interfață este folosită extensiv în componentele vizuale și în serviciile backend pentru a reprezenta datele unui solicitant.</li>
 <li>Proprietatea <code>FullName</code> este doar cu get și returnează concatenarea prenumelui și numelui de familie.</li>
 <li>Enum-ul <code>OnBehalfOnEnum</code> este localizat, ceea ce înseamnă că etichetele sale sunt afișate în funcție de resursele de localizare definite.</li>
+</ul>
+<hr />
+<h1 id="documentatie-pentru-clasa-fodrequestormodel">Documentație pentru Clasa <code>FodRequestorModel</code></h1>
+<h2 id="descriere-generala_1">Descriere Generală</h2>
+<p><code>FodRequestorModel</code> este o implementare a interfeței <code>IRequestor</code> care definește modelul complet al unui solicitant în aplicațiile FOD. Clasa include atât validări personalizate cât și suport pentru localizare prin atributele <code>Display</code> și <code>Required</code>.</p>
+<hr />
+<h2 id="proprietati_1">Proprietăți</h2>
+<table>
+<thead>
+<tr>
+<th>Proprietate</th>
+<th>Tip</th>
+<th>Descriere</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RequestorType</code></td>
+<td><code>PersonType</code></td>
+<td>Tipul solicitantului (persoană fizică sau organizație). Implicit este <code>Individual</code>.</td>
+</tr>
+<tr>
+<td><code>RequestorIdnp</code></td>
+<td><code>string?</code></td>
+<td>Codul numeric personal. Este obligatoriu și validat cu atributul <code>[IDNP]</code>.</td>
+</tr>
+<tr>
+<td><code>RequestorIdno</code></td>
+<td><code>string?</code></td>
+<td>Codul de înregistrare al organizației. Este obligatoriu doar pentru persoane juridice.</td>
+</tr>
+<tr>
+<td><code>RequestorCompanyName</code></td>
+<td><code>string?</code></td>
+<td>Denumirea companiei. Este obligatorie pentru persoane juridice.</td>
+</tr>
+<tr>
+<td><code>RequestorFirstName</code></td>
+<td><code>string?</code></td>
+<td>Prenumele solicitantului. Este obligatoriu.</td>
+</tr>
+<tr>
+<td><code>RequestorLastName</code></td>
+<td><code>string?</code></td>
+<td>Numele de familie al solicitantului. Este obligatoriu.</td>
+</tr>
+<tr>
+<td><code>IsRequestorPhoneRequired</code></td>
+<td><code>bool</code></td>
+<td>Indică dacă telefonul este obligatoriu.</td>
+</tr>
+<tr>
+<td><code>RequestorPhone</code></td>
+<td><code>string?</code></td>
+<td>Număr de telefon. Devine obligatoriu dacă <code>IsRequestorPhoneRequired</code> este <code>true</code>.</td>
+</tr>
+<tr>
+<td><code>IsRequestorEmailRequired</code></td>
+<td><code>bool</code></td>
+<td>Indică dacă emailul este obligatoriu.</td>
+</tr>
+<tr>
+<td><code>RequestorEmail</code></td>
+<td><code>string?</code></td>
+<td>Adresă email. Devine obligatorie dacă <code>IsRequestorEmailRequired</code> este <code>true</code>.</td>
+</tr>
+<tr>
+<td><code>MPowerAuthorizationNumber</code></td>
+<td><code>string?</code></td>
+<td>Numărul autorizației MPower, dacă este aplicabil.</td>
+</tr>
+<tr>
+<td><code>OnBehalfOn</code></td>
+<td><code>OnBehalfOnEnum</code></td>
+<td>Indică dacă acționează în nume propriu, prin MPower sau custom.</td>
+</tr>
+<tr>
+<td><code>FullName</code> <em>(readonly)</em></td>
+<td><code>string?</code></td>
+<td>Returnează numele complet: <code>Prenume + Nume</code>.</td>
+</tr>
+<tr>
+<td><code>MPowerAuthorization</code></td>
+<td><code>MPowerAuthorization?</code></td>
+<td>Detalii despre autorizația MPower selectată.</td>
+</tr>
+<tr>
+<td><code>HasMultipleRequestorStatute</code></td>
+<td><code>bool</code></td>
+<td>Specifică dacă sunt disponibile mai multe statute de solicitant.</td>
+</tr>
+<tr>
+<td><code>RequestorStatuteModel</code></td>
+<td><code>FodRequestorStatuteModel</code></td>
+<td>Modelul ce descrie statutul solicitantului. Obligatoriu dacă există mai multe statute.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="validari">Validări</h2>
+<ul>
+<li><code>RequestorIdnp</code>, <code>RequestorFirstName</code>, <code>RequestorLastName</code> sunt întotdeauna obligatorii.</li>
+<li><code>RequestorIdno</code> și <code>RequestorCompanyName</code> sunt obligatorii doar dacă <code>RequestorType</code> este <code>Organization</code>.</li>
+<li><code>RequestorPhone</code> și <code>RequestorEmail</code> sunt condiționat obligatorii pe baza proprietăților <code>IsRequestorPhoneRequired</code> și <code>IsRequestorEmailRequired</code>.</li>
+<li><code>RequestorStatuteModel</code> este obligatoriu dacă <code>HasMultipleRequestorStatute</code> este <code>true</code>.</li>
+</ul>
+<hr />
+<h2 id="observatii_1">Observații</h2>
+<ul>
+<li>Clasa utilizează atributul <code>[RequiredIf]</code> pentru a permite validări condiționale flexibile.</li>
+<li>Localizarea este realizată prin atributele <code>Display</code> și <code>ErrorMessageResourceName</code> care se bazează pe <code>FodSharedResources</code>.</li>
+<li>Această clasă este utilizată în mod direct în formulare pentru introducerea datelor despre solicitant.</li>
 </ul>
 
 
