@@ -31,8 +31,11 @@ nav:
       - Wizard: componente/FodWizard.md
   - Componente business:
       - Afișarea costului: componente/bussiness/FodRequestCost.md
+      - Datele solicitantului: componente/bussiness/FodRequestor.md
+      - Afișarea Datelor solicitantului: componente/bussiness/FodRequestorDisplay.md
 
   - Servicii:
       - ICurrentUserContextService: servicii/ICurrentUserContextService.md
   - Modele:
       - UserContext: modele/UserContext.md
+      - FodRequestorModel: modele/IRequestor.md
