@@ -4,8 +4,6 @@
 ---
 
 ## Descriere generală
-$1
-
 Această clasă este utilizată și pentru a genera **roluri și contexte personalizate** ale utilizatorului, fiind baza logicii dinamice de construire a permisiunilor și a vizibilității funcționalităților în cadrul aplicației.
 
 ---
