@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../inregistrarea%20serviciilor%20client/">
       
       
-        <link rel="next" href="../creare%20proiect%20frontoffice/">
+        <link rel="next" href="../../configurare/roluri%20implicite/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Crearea soluției - Fod Documentation</title>
+        <title>Ghid de depunere a unei solicitari - Fod Documentation</title>
       
     
     
@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#ghid-pentru-crearea-functionalului-de-depunere-a-unei-solicitari" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -93,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Crearea soluției
+              Ghid de depunere a unei solicitari
             
           </span>
         </div>
@@ -271,17 +276,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../solution%20create/" class="md-nav__link">
         
   
   
@@ -292,7 +290,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -394,10 +391,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ghid-depunere-solicitare/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Ghid de depunere a unei solicitari
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -408,6 +427,128 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#principii-generale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principii Generale
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluxul-de-depunere-a-unei-solicitari" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxul de Depunere a unei Solicitări
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fluxul de Depunere a unei Solicitări">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procese-intermediare-optionale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procese Intermediare Opționale
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelul-fodrequestmodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelul FodRequestModel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplu-practic-crearea-unei-solicitari-ghid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplu Practic: Crearea unei Solicitări Ghid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplu Practic: Crearea unei Solicitări Ghid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-crearea-modelului-de-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Crearea Modelului de Date
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-implementarea-serviciului-irequestservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Implementarea Serviciului IRequestService
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-inregistrarea-serviciului-si-endpoint-ului" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Înregistrarea Serviciului și Endpoint-ului
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideratii-suplimentare" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerații Suplimentare
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concluzie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concluzie
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2409,6 +2550,118 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#principii-generale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principii Generale
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluxul-de-depunere-a-unei-solicitari" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxul de Depunere a unei Solicitări
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fluxul de Depunere a unei Solicitări">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procese-intermediare-optionale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procese Intermediare Opționale
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelul-fodrequestmodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelul FodRequestModel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplu-practic-crearea-unei-solicitari-ghid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplu Practic: Crearea unei Solicitări Ghid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplu Practic: Crearea unei Solicitări Ghid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-crearea-modelului-de-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Crearea Modelului de Date
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-implementarea-serviciului-irequestservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Implementarea Serviciului IRequestService
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-inregistrarea-serviciului-si-endpoint-ului" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Înregistrarea Serviciului și Endpoint-ului
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideratii-suplimentare" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerații Suplimentare
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concluzie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concluzie
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2424,18 +2677,83 @@
 
 
 
-  <h1>Crearea soluției</h1>
-
-<p>Pentru a avea cea mai mare compatibilitate cu componentele <strong>FOD</strong>, este recomandat să se creeze o soluție nouă.</p>
-<p>Pentru a crea o soluție nouă, urmează acești pași:</p>
+<h1 id="ghid-pentru-crearea-functionalului-de-depunere-a-unei-solicitari">Ghid pentru Crearea Funcționalului de Depunere a unei Solicitări</h1>
+<p>Funcționalul de depunere a unei solicitări se bazează în mare parte pe comunicarea dintre aplicația din proiectul <strong>Client</strong> și proiectul <strong>Server</strong>, prin modelele și interfețele prezente în librăria <code>Fod.Components.Shared</code>.</p>
+<h2 id="principii-generale">Principii Generale</h2>
+<p>Majoritatea componentelor FOD:
+- Au un model atașat sau pot fi atașate unei proprietăți a unui model.
+- Pe lângă atributele proprii, comportamentul acestora poate fi influențat de atributele modelului sau ale proprietăților sale.</p>
+<p>Pentru colectarea datelor generice aferente unei solicitări, există deja componente și modele preconfigurate. Pentru datele specifice fiecărui serviciu:
+- Se pot crea modele și procese separate.
+- Sau se pot moșteni modele existente și extinde funcționalitatea.</p>
+<h2 id="fluxul-de-depunere-a-unei-solicitari">Fluxul de Depunere a unei Solicitări</h2>
+<ol>
+<li>Crearea unui obiect nou după modelul solicitării.</li>
+<li>Adăugarea sau actualizarea datelor în baza de date.</li>
+<li>Extragerea datelor din baza de date.</li>
+<li>Verificarea și confirmarea datelor.</li>
+<li>Validarea datelor.</li>
+<li>Semnarea datelor.</li>
+<li>Generarea / descărcarea / printarea recipisei.</li>
+</ol>
+<h3 id="procese-intermediare-optionale">Procese Intermediare Opționale</h3>
 <ul>
-<li>Creează o mapă nouă.</li>
-<li>Deschide această mapă în <strong>Visual Studio Code</strong>.</li>
-<li>Folosește consola integrată pentru a crea soluția și proiectele necesare.</li>
+<li>Calcularea costului.</li>
+<li>Calcularea termenului estimativ de perfectare.</li>
 </ul>
+<h2 id="modelul-fodrequestmodel">Modelul FodRequestModel</h2>
+<p>În librăria <code>Fod.Components.Shared</code>, există modelul <code>FodRequestModel</code>, care poate fi utilizat pentru definirea structurii unei solicitări concrete.</p>
+<p>Tot acolo există interfața <code>IRequestService&lt;T&gt;</code>, unde <code>T</code> este o clasă care moștenește <code>FodRequestModel</code>. Această interfață permite crearea ciclului complet de viață al unei solicitări, de la inițiere până la confirmare și/sau achitare.</p>
+<hr />
+<h2 id="exemplu-practic-crearea-unei-solicitari-ghid">Exemplu Practic: Crearea unei Solicitări Ghid</h2>
+<h3 id="1-crearea-modelului-de-date">1. Crearea Modelului de Date</h3>
+<p>În proiectul <code>Shared</code>, în mapa <code>Models</code>, adăugăm clasa:</p>
+<pre><code class="language-csharp">public class GhidRequestModel : FodRequestModel
+{
+}
+</code></pre>
+<h3 id="2-implementarea-serviciului-irequestservice">2. Implementarea Serviciului IRequestService</h3>
+<p>În proiectul <code>Server</code>, adăugăm în mapa <code>Services</code> clasa:</p>
+<pre><code class="language-csharp">public class GhidRequestService : IRequestService&lt;GhidRequestModel&gt;
+{
+    public async Task&lt;GhidRequestModel&gt; New(string requestTypeCode)
+    {
+        return new GhidRequestModel();
+    }
+
+    // Alte metode pot fi adăugate ulterior
+}
+</code></pre>
+<h3 id="3-inregistrarea-serviciului-si-endpoint-ului">3. Înregistrarea Serviciului și Endpoint-ului</h3>
+<p>În <code>Program.cs</code>:</p>
+<pre><code class="language-csharp">// Înregistrare în containerul de DI
+builder.Services.AddRequestService&lt;GhidRequestModel, GhidRequestService&gt;();
+
+// Înregistrare endpoint pentru identificarea solicitării
+app.MapRequestType&lt;GhidRequestModel&gt;(&quot;ghid&quot;);
+</code></pre>
 <blockquote>
-<p>ℹ️ Dezvoltatorul este liber să utilizeze uneltele preferate pentru a parcurge acești pași.</p>
+<p><code>ghid</code> este codul identificator al tipului de solicitare.</p>
 </blockquote>
+<hr />
+<h2 id="consideratii-suplimentare">Considerații Suplimentare</h2>
+<ul>
+<li>De cele mai multe ori, o aplicație gestionează <strong>un singur tip de solicitare și un singur serviciu</strong>.</li>
+<li>Totuși, pot exista scenarii în care:</li>
+<li>Un tip de solicitare are mai multe servicii.</li>
+<li>Aplicația gestionează mai multe tipuri de solicitări.</li>
+<li>În acest caz, se înregistrează mai multe implementări de <code>IRequestService&lt;&gt;</code>, fiecare având propriul cod identificator.</li>
+</ul>
+<hr />
+<h2 id="concluzie">Concluzie</h2>
+<p>Procesul de depunere a unei solicitări constă în:</p>
+<ul>
+<li>Definirea modelului.</li>
+<li>Atașarea modelului la componente.</li>
+<li>Colectarea și validarea datelor.</li>
+<li>Persistarea și procesarea ulterioară în backend.</li>
+</ul>
+<p>Platforma FOD oferă un cadru flexibil și extensibil pentru gestionarea acestui proces în mod standardizat.</p>
 
 
 
