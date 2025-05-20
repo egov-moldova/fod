@@ -12,6 +12,7 @@ nav:
       - Instalare librarii fod: aplicatia/instalare librarii fod.md
       - Utilizarea stilurilor FOD: aplicatia/utilizarea stilurilor fod.md
       - Înregistrarea serviciilor client: aplicatia/inregistrarea serviciilor client.md
+      - Ghid de depunere a unei solicitari: aplicatia\ghid-depunere-solicitare.md
   - Configurare Fod:
       - Roluri și context implicite: configurare/roluri implicite.md
       - Configurare roluri implicite: configurare/configurare roluri implicite.md
@@ -36,6 +37,7 @@ nav:
       - Afișarea Datelor solicitantului: componente/bussiness/FodRequestorDisplay.md
   - Servicii:
       - ICurrentUserContextService: servicii/ICurrentUserContextService.md
+      - IRequestService: servicii/IRequestService.md
   - Modele:
       - UserContext: modele/UserContext.md
       - FodRequestorModel: modele/IRequestor.md
