@@ -13,13 +13,21 @@ nav:
           - Structura soluției: aplicatia/structura solutiei.md
           - Descriere frontoffice: aplicatia/frontoffice.md
           - Creare proiect Frontoffice: aplicatia/creare proiect frontoffice.md
+          - Descrierea Frontoffice-ului: aplicatia/frontoffice.md
+          
           - Instalare librarii fod: aplicatia/instalare librarii fod.md
           - Utilizarea stilurilor FOD: aplicatia/utilizarea stilurilor fod.md
           - Înregistrarea serviciilor client: aplicatia/inregistrarea serviciilor client.md
           - Ghid de depunere a unei solicitari: aplicatia\ghid-depunere-solicitare.md
-          - Depunere solicitare: aplicatia\depunere.md
-          - Detalii solicitant: aplicatia\detalii solicitant.md
-          - Detalii serviciu: aplicatia\detalii serviciu.md
+          - Depunere solicitare: aplicatia/depunere.md
+          - Pasul Detaliile solicitantului: aplicatia\detalii solicitant.md
+          - Pasul Detaliile serviciului: aplicatia\detalii serviciu.md
+          - Pasul de apostilare: aplicatia\apostilare.md
+          - Pasul modului de recepționare: aplicatia\mod receptionare.md
+          - Pasul de confirmare a datelor: aplicatia\confirmarea datelor.md
+          - Pasul de semnare: aplicatia\semnare.md
+          - Pasul de achitare: aplicatia\achitare.md
+          - Pasul de finalizare: aplicatia\finalizare.md
     - Configurare Fod:
           - Roluri și context implicite: configurare/roluri implicite.md
           - Configurare roluri implicite: configurare/configurare roluri implicite.md
