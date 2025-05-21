@@ -28,6 +28,7 @@ nav:
           - Pasul de semnare: aplicatia\semnare.md
           - Pasul de achitare: aplicatia\achitare.md
           - Pasul de finalizare: aplicatia\finalizare.md
+          - Pagina de verificare a solicitării: aplicatia\verificare.md
     - Configurare Fod:
           - Roluri și context implicite: configurare/roluri implicite.md
           - Configurare roluri implicite: configurare/configurare roluri implicite.md
