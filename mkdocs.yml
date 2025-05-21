@@ -1,95 +1,102 @@
 site_name: Fod Documentation
 
 theme:
-  name: material
+    name: material
 
 nav:
-  - Acasă: index.md
-  - Aplicația Fod:
-      - Introducere: aplicatia/index.md
-      - Crearea soluției: aplicatia/solution create.md
-      - Creare proiect Frontoffice: aplicatia/creare proiect frontoffice.md
-      - Instalare librarii fod: aplicatia/instalare librarii fod.md
-      - Utilizarea stilurilor FOD: aplicatia/utilizarea stilurilor fod.md
-      - Înregistrarea serviciilor client: aplicatia/inregistrarea serviciilor client.md
-      - Ghid de depunere a unei solicitari: aplicatia\ghid-depunere-solicitare.md
-  - Configurare Fod:
-      - Roluri și context implicite: configurare/roluri implicite.md
-      - Configurare roluri implicite: configurare/configurare roluri implicite.md
-      - Configurare roluri particularizate: configurare/configurare roluri particularizate.md
-      - MPass: configurare/mpass.md
-      - Limbile disponibile: configurare/configurare limbilor disponibile.md
-  - Componente:
-      - Badge: componente/FodBadge.md
-      - Button: componente/FodButton.md
-      - Button Group: componente/FodButtonGroup.md
-      - Icon Button: componente/FodIconButton.md
-      - Chips: componente/FodChip.md
-      - ChipSet: componente/FodChipSet.md
-      - CheckBox2: componente/FodCheckBox2.md
-      - DatePicker: componente/FodDatePicker.md
-      - Layout: componente/FodLayout.md
-      - Footer: componente/FodFooter.md
-      - Wizard: componente/FodWizard.md
-  - Componente business:
-      - Afișarea costului: componente/bussiness/FodRequestCost.md
-      - Datele solicitantului: componente/bussiness/FodRequestor.md
-      - Afișarea Datelor solicitantului: componente/bussiness/FodRequestorDisplay.md
-  - Servicii:
-      - ICurrentUserContextService: servicii/ICurrentUserContextService.md
-      - IRequestService: servicii/IRequestService.md
-  - Modele:
-      - UserContext: modele/UserContext.md
-      - FodRequestorModel: modele/IRequestor.md
-  - Database Entities:
-      - BaseEntity: database/entities/BaseEntity.md
-      - ExceptionWorkingProgram: database/entities/ExceptionWorkingProgram.md
-      - File: database/entities/File.md
-      - FileContent: database/entities/FileContent.md
-      - FodAdditionalData: database/entities/FodAdditionalData.md
-      - FodAdditionalDataTypeValue: database/entities/FodAdditionalDataTypeValue.md
-      - FodAdditionalInvoice: database/entities/FodAdditionalInvoice.md
-      - FodAdditionalRequest: database/entities/FodAdditionalRequest.md
-      - FodAdditionalServiceRequest: database/entities/FodAdditionalServiceRequest.md
-      - FodApostilationDetails: database/entities/FodApostilationDetails.md
-      - FodDocumentType: database/entities/FodDocumentType.md
-      - FodExecutionTerm: database/entities/FodExecutionTerm.md
-      - FodMDocsDocumentShare: database/entities/FodMDocsDocumentShare.md
-      - FodNotificationType: database/entities/FodNotificationType.md
-      - FodPickupLocation: database/entities/FodPickupLocation.md
-      - FodPictures: database/entities/FodPictures.md
-      - FodRequest: database/entities/FodRequest.md
-      - FodRequestDelivery: database/entities/FodRequestDelivery.md
-      - FodRequestDeliveryStatusLog: database/entities/FodRequestDeliveryStatusLog.md
-      - FodRequestFile: database/entities/FodRequestFile.md
-      - FodRequestJson: database/entities/FodRequestJson.md
-      - FodRequestJsonSignature: database/entities/FodRequestJsonSignature.md
-      - FodRequestPayment: database/entities/FodRequestPayment.md
-      - FodRequestType: database/entities/FodRequestType.md
-      - FodRequestTypeService: database/entities/FodRequestTypeService.md
-      - FodRequestorStatute: database/entities/FodRequestorStatute.md
-      - FodResponseDataMDocsDocument: database/entities/FodResponseDataMDocsDocument.md
-      - FodResponseDocument: database/entities/FodResponseDocument.md
-      - FodResponseJson: database/entities/FodResponseJson.md
-      - FodResponseJsonSignature: database/entities/FodResponseJsonSignature.md
-      - FodService: database/entities/FodService.md
-      - FodServiceAdditionalData: database/entities/FodServiceAdditionalData.md
-      - FodServiceDocumentType: database/entities/FodServiceDocumentType.md
-      - FodServiceProvider: database/entities/FodServiceProvider.md
-      - FodServiceRequest: database/entities/FodServiceRequest.md
-      - FodServiceRequestAdditionalData: database/entities/FodServiceRequestAdditionalData.md
-      - FodServiceRequestFile: database/entities/FodServiceRequestFile.md
-      - FodServiceRequestResponseData: database/entities/FodServiceRequestResponseData.md
-      - FodSignature: database/entities/FodSignature.md
-      - FodTermsAndCondition: database/entities/FodTermsAndCondition.md
-      - FodUserProfileOrganization: database/entities/FodUserProfileOrganization.md
-      - FodUserProfileRole: database/entities/FodUserProfileRole.md
-      - FodUserSignature: database/entities/FodUserSignature.md
-      - JsonSchema: database/entities/JsonSchema.md
-      - RSSPAExecutionTerm: database/entities/RSSPAExecutionTerm.md
-      - ServiceRequestDelivery: database/entities/ServiceRequestDelivery.md
-      - ServiceRequestDeliveryStatusLog: database/entities/ServiceRequestDeliveryStatusLog.md
-      - ServiceRequestDiscount: database/entities/ServiceRequestDiscount.md
-      - SignableDocument: database/entities/SignableDocument.md
-      - UserProfile: database/entities/UserProfile.md
-      - WorkingProgram: database/entities/WorkingProgram.md
+    - Acasă: index.md
+    - Aplicația Fod:
+          - Introducere: aplicatia/index.md
+          - Cerinte: aplicatia/cerinte.md
+          - Cunostinte: aplicatia/cunostinte.md
+          - Crearea soluției: aplicatia/solution create.md
+          - Structura soluției: aplicatia/structura solutiei.md
+          - Descriere frontoffice: aplicatia/frontoffice.md
+          - Creare proiect Frontoffice: aplicatia/creare proiect frontoffice.md
+          - Instalare librarii fod: aplicatia/instalare librarii fod.md
+          - Utilizarea stilurilor FOD: aplicatia/utilizarea stilurilor fod.md
+          - Înregistrarea serviciilor client: aplicatia/inregistrarea serviciilor client.md
+          - Ghid de depunere a unei solicitari: aplicatia\ghid-depunere-solicitare.md
+          - Depunere solicitare: aplicatia\depunere.md
+          - Detalii solicitant: aplicatia\detalii solicitant.md
+          - Detalii serviciu: aplicatia\detalii serviciu.md
+    - Configurare Fod:
+          - Roluri și context implicite: configurare/roluri implicite.md
+          - Configurare roluri implicite: configurare/configurare roluri implicite.md
+          - Configurare roluri particularizate: configurare/configurare roluri particularizate.md
+          - MPass: configurare/mpass.md
+          - Limbile disponibile: configurare/configurare limbilor disponibile.md
+    - Componente:
+          - Badge: componente/FodBadge.md
+          - Button: componente/FodButton.md
+          - Button Group: componente/FodButtonGroup.md
+          - Icon Button: componente/FodIconButton.md
+          - Chips: componente/FodChip.md
+          - ChipSet: componente/FodChipSet.md
+          - CheckBox2: componente/FodCheckBox2.md
+          - DatePicker: componente/FodDatePicker.md
+          - Layout: componente/FodLayout.md
+          - Footer: componente/FodFooter.md
+          - Wizard: componente/FodWizard.md
+    - Componente business:
+          - Afișarea costului: componente/bussiness/FodRequestCost.md
+          - Datele solicitantului: componente/bussiness/FodRequestor.md
+          - Afișarea Datelor solicitantului: componente/bussiness/FodRequestorDisplay.md
+    - Servicii:
+          - ICurrentUserContextService: servicii/ICurrentUserContextService.md
+          - IRequestService: servicii/IRequestService.md
+    - Modele:
+          - UserContext: modele/UserContext.md
+          - FodRequestorModel: modele/IRequestor.md
+    - Database Entities:
+          - BaseEntity: database/entities/BaseEntity.md
+          - ExceptionWorkingProgram: database/entities/ExceptionWorkingProgram.md
+          - File: database/entities/File.md
+          - FileContent: database/entities/FileContent.md
+          - FodAdditionalData: database/entities/FodAdditionalData.md
+          - FodAdditionalDataTypeValue: database/entities/FodAdditionalDataTypeValue.md
+          - FodAdditionalInvoice: database/entities/FodAdditionalInvoice.md
+          - FodAdditionalRequest: database/entities/FodAdditionalRequest.md
+          - FodAdditionalServiceRequest: database/entities/FodAdditionalServiceRequest.md
+          - FodApostilationDetails: database/entities/FodApostilationDetails.md
+          - FodDocumentType: database/entities/FodDocumentType.md
+          - FodExecutionTerm: database/entities/FodExecutionTerm.md
+          - FodMDocsDocumentShare: database/entities/FodMDocsDocumentShare.md
+          - FodNotificationType: database/entities/FodNotificationType.md
+          - FodPickupLocation: database/entities/FodPickupLocation.md
+          - FodPictures: database/entities/FodPictures.md
+          - FodRequest: database/entities/FodRequest.md
+          - FodRequestDelivery: database/entities/FodRequestDelivery.md
+          - FodRequestDeliveryStatusLog: database/entities/FodRequestDeliveryStatusLog.md
+          - FodRequestFile: database/entities/FodRequestFile.md
+          - FodRequestJson: database/entities/FodRequestJson.md
+          - FodRequestJsonSignature: database/entities/FodRequestJsonSignature.md
+          - FodRequestPayment: database/entities/FodRequestPayment.md
+          - FodRequestType: database/entities/FodRequestType.md
+          - FodRequestTypeService: database/entities/FodRequestTypeService.md
+          - FodRequestorStatute: database/entities/FodRequestorStatute.md
+          - FodResponseDataMDocsDocument: database/entities/FodResponseDataMDocsDocument.md
+          - FodResponseDocument: database/entities/FodResponseDocument.md
+          - FodResponseJson: database/entities/FodResponseJson.md
+          - FodResponseJsonSignature: database/entities/FodResponseJsonSignature.md
+          - FodService: database/entities/FodService.md
+          - FodServiceAdditionalData: database/entities/FodServiceAdditionalData.md
+          - FodServiceDocumentType: database/entities/FodServiceDocumentType.md
+          - FodServiceProvider: database/entities/FodServiceProvider.md
+          - FodServiceRequest: database/entities/FodServiceRequest.md
+          - FodServiceRequestAdditionalData: database/entities/FodServiceRequestAdditionalData.md
+          - FodServiceRequestFile: database/entities/FodServiceRequestFile.md
+          - FodServiceRequestResponseData: database/entities/FodServiceRequestResponseData.md
+          - FodSignature: database/entities/FodSignature.md
+          - FodTermsAndCondition: database/entities/FodTermsAndCondition.md
+          - FodUserProfileOrganization: database/entities/FodUserProfileOrganization.md
+          - FodUserProfileRole: database/entities/FodUserProfileRole.md
+          - FodUserSignature: database/entities/FodUserSignature.md
+          - JsonSchema: database/entities/JsonSchema.md
+          - RSSPAExecutionTerm: database/entities/RSSPAExecutionTerm.md
+          - ServiceRequestDelivery: database/entities/ServiceRequestDelivery.md
+          - ServiceRequestDeliveryStatusLog: database/entities/ServiceRequestDeliveryStatusLog.md
+          - ServiceRequestDiscount: database/entities/ServiceRequestDiscount.md
+          - SignableDocument: database/entities/SignableDocument.md
+          - UserProfile: database/entities/UserProfile.md
+          - WorkingProgram: database/entities/WorkingProgram.md

@@ -12,5 +12,5 @@ Componentele **FOD** pot fi utilizate atât într-un proiect deja existent, cât
 
 Pentru acest ghid vor fi utilizate următoarele instrumente:
 
-- [.NET SDK x64 Versiunea 7.0.10](https://dotnet.microsoft.com/en-us/download)
+- [.NET SDK x64 Versiunea 8](https://dotnet.microsoft.com/en-us/download)
 - Visual Studio Code
