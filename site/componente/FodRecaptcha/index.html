@@ -1,0 +1,6506 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../FodRating/">
+      
+      
+        <link rel="next" href="../FodSearchSelect/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Recaptcha - Fod Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#recaptcha" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Fod Documentation" class="md-header__button md-logo" aria-label="Fod Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fod Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Recaptcha
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Fod Documentation" class="md-nav__button md-logo" aria-label="Fod Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Fod Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Acasă
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Aplicația Fod
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Aplicația Fod
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducere
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/cerinte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cerinte
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/cunostinte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cunostinte
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/solution%20create/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Crearea soluției
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/structura%20solutiei/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Structura soluției
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/frontoffice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Descriere frontoffice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/creare%20proiect%20frontoffice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creare proiect Frontoffice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/frontoffice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Descriere frontoffice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/instalare%20librarii%20fod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalare librarii fod
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/utilizarea%20stilurilor%20fod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Utilizarea stilurilor FOD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/inregistrarea%20serviciilor%20client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Înregistrarea serviciilor client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/ghid-depunere-solicitare.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ghid de depunere a unei solicitari
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/depunere/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Depunere solicitare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/detalii solicitant.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pasul Detaliile solicitantului
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/detalii serviciu.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pasul Detaliile serviciului
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/apostilare.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pasul de apostilare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/mod receptionare.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pasul modului de recepționare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/confirmarea datelor.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pasul de confirmare a datelor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/semnare.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pasul de semnare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/achitare.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pasul de achitare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/finalizare.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pasul de finalizare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/verificare.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pagina de verificare a solicitării
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Configurare Fod
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Configurare Fod
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configurare/roluri%20implicite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roluri și context implicite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configurare/configurare%20roluri%20implicite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configurare roluri implicite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configurare/configurare%20roluri%20particularizate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configurare roluri particularizate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configurare/mpass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MPass
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configurare/configurare%20limbilor%20disponibile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Limbile disponibile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Componente
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Componente
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodAlert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alert
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodBadge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Badge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodButton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Button
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodButtonGroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Button Group
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodCard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Card
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodCheckbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Checkbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodCheckBox2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CheckBox2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodChip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chips
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodChipSet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ChipSet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodCollapse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Collapse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodContainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Container
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodCustomInputSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom Input Select
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodDataTable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DataTable
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodDatePicker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DatePicker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodDateRangePicker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DateRangePicker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodDrawer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Drawer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodDropdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dropdown
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodExceptionDays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exception Days
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodExpansionPanels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Expansion Panels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodFaqViewer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ Viewer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodFooter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Footer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodGrid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodGroupSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Group Select
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodHeader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Header
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodIcon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Icon
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodIconButton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Icon Button
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodImage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Image
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInput/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInput1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInputAdornment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Adornment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInputCheckbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Checkbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInputFile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input File
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInputFilteredSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Filtered Select
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInputLabel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Label
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInputNullableNumber/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Nullable Number
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FODInputNumber/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Number
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FODInputRadio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Radio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FODInputRadioGroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Radio Group
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FODInputSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Select
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FODInputText/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Text
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FODInputWrapper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Wrapper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodLayout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodLoading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Loading
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodMenu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Menu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodModal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodNavMenu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nav Menu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodNotificationProvider/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NotificationProvider
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodNumberBox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Number Box
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodOverlay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overlay
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodPageContentNavigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Page Content Navigation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodPagination/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pagination
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodPaper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Paper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodPopover/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Popover
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodRadio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Radio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodRangeInput/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Range Input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodRating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rating
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Recaptcha
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recaptcha
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documentatie-pentru-componenta-fodrecaptcha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentație pentru componenta FodRecaptcha
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentație pentru componenta FodRecaptcha">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-descriere-generala" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Descriere Generală
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configurare-initiala" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Configurare inițială
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Configurare inițială">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pasul-1-obtinerea-cheilor-google-recaptcha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pasul 1: Obținerea cheilor Google reCAPTCHA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pasul-2-configurare-in-appsettingsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pasul 2: Configurare în appsettings.json
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pasul-3-inregistrare-servicii" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pasul 3: Înregistrare servicii
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pasul 3: Înregistrare servicii">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-side-programcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client-side (Program.cs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-side-programcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server-side (Program.cs)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ghid-de-utilizare-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Ghid de Utilizare API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Ghid de Utilizare API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integrare-simpla-in-formular" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrare simplă în formular
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validare-server-side-controller-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validare server-side (Controller API)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formular-de-inregistrare-cu-recaptcha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formular de înregistrare cu reCAPTCHA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurare-pentru-utilizatori-autentificati" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurare pentru utilizatori autentificați
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validare-manuala-cu-feedback-vizual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validare manuală cu feedback vizual
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-model-si-configurare" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Model și configurare
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Model și configurare">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recaptchaoptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReCaptchaOptions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recaptcharesponse" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReCaptchaResponse
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-servicii-disponibile" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Servicii disponibile
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Servicii disponibile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#irecaptchaservice-client-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      IRecaptchaService (Client-side)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#irecaptchavalidationservice-server-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      IRecaptchaValidationService (Server-side)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-integrare-cu-alte-componente" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Integrare cu alte componente
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Integrare cu alte componente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-wizard-pentru-formulare-multi-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      În Wizard pentru formulare multi-step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-modal-pentru-actiuni-critice" class="md-nav__link">
+    <span class="md-ellipsis">
+      În Modal pentru acțiuni critice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-gestionarea-erorilor" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Gestionarea erorilor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-configurare-avansata" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Configurare avansată
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Configurare avansată">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurare-cu-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurare cu environment variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#middleware-pentru-validare-automata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Middleware pentru validare automată
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-testare" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Testare
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Testare">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mock-pentru-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mock pentru development
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-monitorizare-si-analiza" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Monitorizare și analiză
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-bune-practici" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Bune practici
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recaptcha-nu-se-incarca" class="md-nav__link">
+    <span class="md-ellipsis">
+      reCAPTCHA nu se încarcă
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-invalid-pe-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token invalid pe server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilizatori-blocati-incorect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilizatori blocați incorect
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-limitari" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Limitări
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-concluzie" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Concluzie
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodSearchSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Search Select
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Select
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodSpacer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Spacer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodTabControl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tab Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FODTable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Table
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodText/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Text
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodTextArea/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TextArea
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodTextbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Textbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodToolbar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Toolbar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tooltip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tooltip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodTooltip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodTooltip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodWizard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wizard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodVirtualize/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Virtualize
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodMask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FileViewer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FileViewer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LanguageSelector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LanguageSelector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CultureSelector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CultureSelector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OutsideHandleContainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OutsideHandleContainer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Componente business
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Componente business
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bussiness/FodRequestCost/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Afișarea costului
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bussiness/FodRequestor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datele solicitantului
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../business/FodRequestStatus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Status cerere
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bussiness/FodRequestorDisplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Afișarea Datelor solicitantului
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodApostila/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apostila
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodApostilaDisplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apostila Display
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodDeliveryDisplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Delivery Display
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodServiceRequestStatus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service Request Status
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodServiceRequestStatusResponse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service Request Status Response
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodVerifyDocument/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verify Document
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodVerifyDocumentResponse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verify Document Response
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodFeedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Feedback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodFeedbackBadge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Feedback Badge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodContextProvider/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Context Provider
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodContextSelector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Context Selector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FODInputOnBehalfOfRadioGroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    On Behalf Of Radio Group
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Servicii
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Servicii
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/ICurrentUserContextService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ICurrentUserContextService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/IRequestService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IRequestService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/AuthenticationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AuthenticationService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/BreakpointService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BreakpointService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/ConfigurationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ConfigurationService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/ContextService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ContextService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/CultureService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CultureService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/FileUploadService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FileUploadService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/FodNotificationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodNotificationService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/FodPopoverService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodPopoverService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/JsApiService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JsApiService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/PrintingService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PrintingService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/RecaptchaService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RecaptchaService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/ScrollManager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ScrollManager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/SelectableItemsService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SelectableItemsService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/SingleFileUploadService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SingleFileUploadService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/UserService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UserService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Modele
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Modele
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modele/UserContext/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UserContext
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modele/IRequestor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestorModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Database Entities
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Database Entities
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/BaseEntity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BaseEntity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/ExceptionWorkingProgram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ExceptionWorkingProgram
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/File/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FileContent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FileContent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodAdditionalData/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodAdditionalData
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodAdditionalDataTypeValue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodAdditionalDataTypeValue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodAdditionalInvoice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodAdditionalInvoice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodAdditionalRequest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodAdditionalRequest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodAdditionalServiceRequest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodAdditionalServiceRequest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodApostilationDetails/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodApostilationDetails
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodDocumentType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodDocumentType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodExecutionTerm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodExecutionTerm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodMDocsDocumentShare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodMDocsDocumentShare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodNotificationType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodNotificationType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodPickupLocation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodPickupLocation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodPictures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodPictures
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestDelivery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestDelivery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestDeliveryStatusLog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestDeliveryStatusLog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestFile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestFile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestJson/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestJson
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestJsonSignature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestJsonSignature
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestPayment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestPayment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestTypeService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestTypeService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestorStatute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestorStatute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodResponseDataMDocsDocument/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodResponseDataMDocsDocument
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodResponseDocument/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodResponseDocument
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodResponseJson/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodResponseJson
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodResponseJsonSignature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodResponseJsonSignature
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodServiceAdditionalData/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodServiceAdditionalData
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodServiceDocumentType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodServiceDocumentType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodServiceProvider/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodServiceProvider
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodServiceRequest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodServiceRequest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodServiceRequestAdditionalData/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodServiceRequestAdditionalData
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodServiceRequestFile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodServiceRequestFile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodServiceRequestResponseData/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodServiceRequestResponseData
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodSignature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodSignature
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodTermsAndCondition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodTermsAndCondition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodUserProfileOrganization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodUserProfileOrganization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodUserProfileRole/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodUserProfileRole
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodUserSignature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodUserSignature
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/JsonSchema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JsonSchema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/RSSPAExecutionTerm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RSSPAExecutionTerm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/ServiceRequestDelivery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ServiceRequestDelivery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/ServiceRequestDeliveryStatusLog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ServiceRequestDeliveryStatusLog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/ServiceRequestDiscount/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ServiceRequestDiscount
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/SignableDocument/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SignableDocument
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/UserProfile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UserProfile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/WorkingProgram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WorkingProgram
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documentatie-pentru-componenta-fodrecaptcha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentație pentru componenta FodRecaptcha
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentație pentru componenta FodRecaptcha">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-descriere-generala" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Descriere Generală
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configurare-initiala" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Configurare inițială
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Configurare inițială">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pasul-1-obtinerea-cheilor-google-recaptcha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pasul 1: Obținerea cheilor Google reCAPTCHA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pasul-2-configurare-in-appsettingsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pasul 2: Configurare în appsettings.json
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pasul-3-inregistrare-servicii" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pasul 3: Înregistrare servicii
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pasul 3: Înregistrare servicii">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-side-programcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client-side (Program.cs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-side-programcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server-side (Program.cs)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ghid-de-utilizare-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Ghid de Utilizare API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Ghid de Utilizare API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integrare-simpla-in-formular" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrare simplă în formular
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validare-server-side-controller-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validare server-side (Controller API)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formular-de-inregistrare-cu-recaptcha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formular de înregistrare cu reCAPTCHA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurare-pentru-utilizatori-autentificati" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurare pentru utilizatori autentificați
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validare-manuala-cu-feedback-vizual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validare manuală cu feedback vizual
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-model-si-configurare" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Model și configurare
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Model și configurare">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recaptchaoptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReCaptchaOptions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recaptcharesponse" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReCaptchaResponse
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-servicii-disponibile" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Servicii disponibile
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Servicii disponibile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#irecaptchaservice-client-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      IRecaptchaService (Client-side)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#irecaptchavalidationservice-server-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      IRecaptchaValidationService (Server-side)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-integrare-cu-alte-componente" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Integrare cu alte componente
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Integrare cu alte componente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-wizard-pentru-formulare-multi-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      În Wizard pentru formulare multi-step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-modal-pentru-actiuni-critice" class="md-nav__link">
+    <span class="md-ellipsis">
+      În Modal pentru acțiuni critice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-gestionarea-erorilor" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Gestionarea erorilor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-configurare-avansata" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Configurare avansată
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Configurare avansată">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurare-cu-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurare cu environment variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#middleware-pentru-validare-automata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Middleware pentru validare automată
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-testare" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Testare
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Testare">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mock-pentru-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mock pentru development
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-monitorizare-si-analiza" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Monitorizare și analiză
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-bune-practici" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Bune practici
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recaptcha-nu-se-incarca" class="md-nav__link">
+    <span class="md-ellipsis">
+      reCAPTCHA nu se încarcă
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-invalid-pe-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token invalid pe server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilizatori-blocati-incorect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilizatori blocați incorect
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-limitari" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Limitări
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-concluzie" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Concluzie
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="recaptcha">Recaptcha</h1>
+<h2 id="documentatie-pentru-componenta-fodrecaptcha">Documentație pentru componenta FodRecaptcha</h2>
+<h3 id="1-descriere-generala">1. Descriere Generală</h3>
+<p><code>FodRecaptcha</code> este componenta pentru integrarea Google reCAPTCHA în aplicații Blazor, oferind protecție împotriva spam-ului și automatizărilor abuzive. Componenta suportă reCAPTCHA v3 (invizibil) și include validare atât pe client cât și pe server.</p>
+<p>Caracteristici principale:
+- Integrare Google reCAPTCHA v3 (invizibil)
+- Validare pe client și server
+- Configurare flexibilă prin opțiuni
+- Suport pentru utilizatori autentificați
+- Gestionare automată a scripturilor
+- Răspuns cu status detaliat
+- Integrare ușoară în formulare
+- Protecție împotriva atacurilor bot</p>
+<h3 id="2-configurare-initiala">2. Configurare inițială</h3>
+<h4 id="pasul-1-obtinerea-cheilor-google-recaptcha">Pasul 1: Obținerea cheilor Google reCAPTCHA</h4>
+<ol>
+<li>Accesați <a href="https://www.google.com/recaptcha/admin">Google reCAPTCHA Admin Console</a></li>
+<li>Înregistrați un nou site</li>
+<li>Selectați reCAPTCHA v3</li>
+<li>Copiați Site Key și Secret Key</li>
+</ol>
+<h4 id="pasul-2-configurare-in-appsettingsjson">Pasul 2: Configurare în appsettings.json</h4>
+<pre><code class="language-json">{
+  &quot;ReCaptcha&quot;: {
+    &quot;SiteKey&quot;: &quot;your-site-key-here&quot;,
+    &quot;SecretKey&quot;: &quot;your-secret-key-here&quot;,
+    &quot;Version&quot;: &quot;V3&quot;,
+    &quot;ValidateAuthenticated&quot;: false
+  }
+}
+</code></pre>
+<h4 id="pasul-3-inregistrare-servicii">Pasul 3: Înregistrare servicii</h4>
+<h5 id="client-side-programcs">Client-side (Program.cs)</h5>
+<pre><code class="language-csharp">// Înregistrare serviciu recaptcha
+builder.Services.AddScoped&lt;IRecaptchaService, RecaptchaService&gt;();
+
+// Configurare opțiuni
+builder.Services.Configure&lt;ReCaptchaOptions&gt;(
+    builder.Configuration.GetSection(&quot;ReCaptcha&quot;));
+</code></pre>
+<h5 id="server-side-programcs">Server-side (Program.cs)</h5>
+<pre><code class="language-csharp">// Înregistrare serviciu validare
+builder.Services.AddScoped&lt;IRecaptchaValidationService, RecaptchaValidationService&gt;();
+
+// Configurare opțiuni
+builder.Services.Configure&lt;ReCaptchaOptions&gt;(
+    builder.Configuration.GetSection(&quot;ReCaptcha&quot;));
+</code></pre>
+<h3 id="3-ghid-de-utilizare-api">3. Ghid de Utilizare API</h3>
+<h4 id="integrare-simpla-in-formular">Integrare simplă în formular</h4>
+<pre><code class="language-razor">@page &quot;/contact&quot;
+@inject IRecaptchaService RecaptchaService
+@inject HttpClient Http
+
+&lt;EditForm Model=&quot;@contactForm&quot; OnValidSubmit=&quot;HandleSubmit&quot;&gt;
+    &lt;DataAnnotationsValidator /&gt;
+
+    &lt;FodTextField @bind-Value=&quot;contactForm.Name&quot; 
+                  Label=&quot;Nume&quot; 
+                  Required=&quot;true&quot; /&gt;
+
+    &lt;FodTextField @bind-Value=&quot;contactForm.Email&quot; 
+                  Label=&quot;Email&quot; 
+                  Type=&quot;email&quot;
+                  Required=&quot;true&quot; /&gt;
+
+    &lt;FodTextArea @bind-Value=&quot;contactForm.Message&quot; 
+                 Label=&quot;Mesaj&quot;
+                 Rows=&quot;5&quot;
+                 Required=&quot;true&quot; /&gt;
+
+    &lt;!-- Componenta reCAPTCHA --&gt;
+    &lt;FodRecaptcha /&gt;
+
+    &lt;FodButton Type=&quot;ButtonType.Submit&quot; 
+               Color=&quot;FodColor.Primary&quot;
+               Disabled=&quot;@isSubmitting&quot;&gt;
+        @if (isSubmitting)
+        {
+            &lt;FodLoadingCircular Size=&quot;FodSize.Small&quot; 
+                                Indeterminate=&quot;true&quot; 
+                                Class=&quot;me-2&quot; /&gt;
+        }
+        Trimite
+    &lt;/FodButton&gt;
+&lt;/EditForm&gt;
+
+@if (!string.IsNullOrEmpty(statusMessage))
+{
+    &lt;FodAlert Severity=&quot;@alertSeverity&quot; Class=&quot;mt-3&quot;&gt;
+        @statusMessage
+    &lt;/FodAlert&gt;
+}
+
+@code {
+    private ContactForm contactForm = new();
+    private bool isSubmitting = false;
+    private string statusMessage = &quot;&quot;;
+    private Severity alertSeverity = Severity.Info;
+
+    private async Task HandleSubmit()
+    {
+        isSubmitting = true;
+        statusMessage = &quot;&quot;;
+
+        try
+        {
+            // Execută validarea reCAPTCHA
+            var token = await RecaptchaService.Execute();
+
+            if (string.IsNullOrEmpty(token))
+            {
+                statusMessage = &quot;Validare reCAPTCHA eșuată. Vă rugăm încercați din nou.&quot;;
+                alertSeverity = Severity.Error;
+                return;
+            }
+
+            // Trimite formularul cu token-ul
+            var response = await Http.PostAsJsonAsync(&quot;/api/contact&quot;, new
+            {
+                contactForm.Name,
+                contactForm.Email,
+                contactForm.Message,
+                RecaptchaToken = token
+            });
+
+            if (response.IsSuccessStatusCode)
+            {
+                statusMessage = &quot;Mesaj trimis cu succes!&quot;;
+                alertSeverity = Severity.Success;
+                contactForm = new(); // Reset form
+            }
+            else
+            {
+                statusMessage = &quot;Eroare la trimiterea mesajului.&quot;;
+                alertSeverity = Severity.Error;
+            }
+        }
+        catch (Exception ex)
+        {
+            statusMessage = $&quot;Eroare: {ex.Message}&quot;;
+            alertSeverity = Severity.Error;
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+
+    public class ContactForm
+    {
+        [Required(ErrorMessage = &quot;Numele este obligatoriu&quot;)]
+        public string Name { get; set; }
+
+        [Required(ErrorMessage = &quot;Email-ul este obligatoriu&quot;)]
+        [EmailAddress(ErrorMessage = &quot;Email invalid&quot;)]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = &quot;Mesajul este obligatoriu&quot;)]
+        public string Message { get; set; }
+    }
+}
+</code></pre>
+<h4 id="validare-server-side-controller-api">Validare server-side (Controller API)</h4>
+<pre><code class="language-csharp">[ApiController]
+[Route(&quot;api/[controller]&quot;)]
+public class ContactController : ControllerBase
+{
+    private readonly IRecaptchaValidationService _recaptchaService;
+    private readonly IContactService _contactService;
+
+    public ContactController(
+        IRecaptchaValidationService recaptchaService,
+        IContactService contactService)
+    {
+        _recaptchaService = recaptchaService;
+        _contactService = contactService;
+    }
+
+    [HttpPost]
+    public async Task&lt;IActionResult&gt; Submit(ContactRequest request)
+    {
+        // Validare model
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
+        // Validare reCAPTCHA
+        var recaptchaResponse = await _recaptchaService.Validate(
+            request.RecaptchaToken, 
+            HttpContext);
+
+        if (recaptchaResponse.Status != ReCaptchaResponseStatusEnum.Success)
+        {
+            return BadRequest(new 
+            { 
+                error = &quot;Validare reCAPTCHA eșuată&quot;,
+                message = recaptchaResponse.Message 
+            });
+        }
+
+        // Procesare formular
+        try
+        {
+            await _contactService.ProcessContactForm(request);
+            return Ok(new { message = &quot;Mesaj trimis cu succes&quot; });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { error = &quot;Eroare server&quot; });
+        }
+    }
+}
+
+public class ContactRequest
+{
+    [Required]
+    public string Name { get; set; }
+
+    [Required]
+    [EmailAddress]
+    public string Email { get; set; }
+
+    [Required]
+    public string Message { get; set; }
+
+    [Required]
+    public string RecaptchaToken { get; set; }
+}
+</code></pre>
+<h4 id="formular-de-inregistrare-cu-recaptcha">Formular de înregistrare cu reCAPTCHA</h4>
+<pre><code class="language-razor">@page &quot;/register&quot;
+@inject IRecaptchaService RecaptchaService
+@inject IAuthService AuthService
+@inject NavigationManager Navigation
+
+&lt;FodCard Class=&quot;mx-auto&quot; Style=&quot;max-width: 500px;&quot;&gt;
+    &lt;FodCardContent&gt;
+        &lt;FodText Typo=&quot;Typo.h4&quot; GutterBottom=&quot;true&quot; Align=&quot;Align.Center&quot;&gt;
+            Înregistrare cont nou
+        &lt;/FodText&gt;
+
+        &lt;EditForm Model=&quot;@registerModel&quot; OnValidSubmit=&quot;HandleRegister&quot;&gt;
+            &lt;DataAnnotationsValidator /&gt;
+
+            &lt;FodTextField @bind-Value=&quot;registerModel.Email&quot; 
+                          Label=&quot;Email&quot; 
+                          Type=&quot;email&quot;
+                          FullWidth=&quot;true&quot;
+                          Class=&quot;mb-3&quot; /&gt;
+            &lt;ValidationMessage For=&quot;@(() =&gt; registerModel.Email)&quot; /&gt;
+
+            &lt;FodTextField @bind-Value=&quot;registerModel.Password&quot; 
+                          Label=&quot;Parolă&quot; 
+                          Type=&quot;password&quot;
+                          FullWidth=&quot;true&quot;
+                          Class=&quot;mb-3&quot; /&gt;
+            &lt;ValidationMessage For=&quot;@(() =&gt; registerModel.Password)&quot; /&gt;
+
+            &lt;FodTextField @bind-Value=&quot;registerModel.ConfirmPassword&quot; 
+                          Label=&quot;Confirmă parola&quot; 
+                          Type=&quot;password&quot;
+                          FullWidth=&quot;true&quot;
+                          Class=&quot;mb-3&quot; /&gt;
+            &lt;ValidationMessage For=&quot;@(() =&gt; registerModel.ConfirmPassword)&quot; /&gt;
+
+            &lt;FodCheckbox @bind-Checked=&quot;registerModel.AcceptTerms&quot; 
+                         Class=&quot;mb-3&quot;&gt;
+                Accept &lt;FodLink Href=&quot;/terms&quot;&gt;termenii și condițiile&lt;/FodLink&gt;
+            &lt;/FodCheckbox&gt;
+            &lt;ValidationMessage For=&quot;@(() =&gt; registerModel.AcceptTerms)&quot; /&gt;
+
+            &lt;!-- reCAPTCHA pentru protecție --&gt;
+            &lt;FodRecaptcha /&gt;
+
+            &lt;FodButton Type=&quot;ButtonType.Submit&quot; 
+                       Color=&quot;FodColor.Primary&quot;
+                       FullWidth=&quot;true&quot;
+                       Disabled=&quot;@isProcessing&quot;&gt;
+                @if (isProcessing)
+                {
+                    &lt;FodLoadingCircular Size=&quot;FodSize.Small&quot; 
+                                        Indeterminate=&quot;true&quot; 
+                                        Class=&quot;me-2&quot; /&gt;
+                }
+                Înregistrare
+            &lt;/FodButton&gt;
+        &lt;/EditForm&gt;
+
+        @if (errors.Any())
+        {
+            &lt;FodAlert Severity=&quot;Severity.Error&quot; Class=&quot;mt-3&quot;&gt;
+                &lt;ul class=&quot;mb-0&quot;&gt;
+                    @foreach (var error in errors)
+                    {
+                        &lt;li&gt;@error&lt;/li&gt;
+                    }
+                &lt;/ul&gt;
+            &lt;/FodAlert&gt;
+        }
+    &lt;/FodCardContent&gt;
+&lt;/FodCard&gt;
+
+@code {
+    private RegisterModel registerModel = new();
+    private bool isProcessing = false;
+    private List&lt;string&gt; errors = new();
+
+    private async Task HandleRegister()
+    {
+        isProcessing = true;
+        errors.Clear();
+
+        try
+        {
+            // Obține token reCAPTCHA
+            var recaptchaToken = await RecaptchaService.Execute();
+
+            if (string.IsNullOrEmpty(recaptchaToken))
+            {
+                errors.Add(&quot;Validare de securitate eșuată. Reîncărcați pagina.&quot;);
+                return;
+            }
+
+            // Înregistrare utilizator
+            var result = await AuthService.Register(
+                registerModel.Email, 
+                registerModel.Password,
+                recaptchaToken);
+
+            if (result.Succeeded)
+            {
+                Navigation.NavigateTo(&quot;/login?registered=true&quot;);
+            }
+            else
+            {
+                errors.AddRange(result.Errors);
+            }
+        }
+        catch (Exception ex)
+        {
+            errors.Add(&quot;Eroare la înregistrare. Vă rugăm încercați din nou.&quot;);
+        }
+        finally
+        {
+            isProcessing = false;
+        }
+    }
+}
+</code></pre>
+<h4 id="configurare-pentru-utilizatori-autentificati">Configurare pentru utilizatori autentificați</h4>
+<pre><code class="language-razor">@* În componente unde utilizatorii autentificați nu necesită validare *@
+@inject IAuthenticationStateProvider AuthStateProvider
+
+@if (!isAuthenticated)
+{
+    &lt;FodRecaptcha /&gt;
+}
+
+@code {
+    private bool isAuthenticated = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        isAuthenticated = authState.User.Identity?.IsAuthenticated ?? false;
+    }
+}
+</code></pre>
+<h4 id="validare-manuala-cu-feedback-vizual">Validare manuală cu feedback vizual</h4>
+<pre><code class="language-razor">&lt;FodCard&gt;
+    &lt;FodCardContent&gt;
+        &lt;FodText Typo=&quot;Typo.h6&quot; GutterBottom=&quot;true&quot;&gt;
+            Verificare securitate
+        &lt;/FodText&gt;
+
+        &lt;FodRecaptcha /&gt;
+
+        &lt;FodButton Color=&quot;FodColor.Primary&quot; 
+                   OnClick=&quot;ValidateRecaptcha&quot;
+                   Class=&quot;mt-3&quot;&gt;
+            Verifică
+        &lt;/FodButton&gt;
+
+        @if (validationResult != null)
+        {
+            &lt;FodAlert Severity=&quot;@GetSeverity()&quot; Class=&quot;mt-3&quot;&gt;
+                &lt;FodAlertTitle&gt;
+                    @(validationResult.Success ? &quot;Validare reușită&quot; : &quot;Validare eșuată&quot;)
+                &lt;/FodAlertTitle&gt;
+                @validationResult.Message
+            &lt;/FodAlert&gt;
+        }
+    &lt;/FodCardContent&gt;
+&lt;/FodCard&gt;
+
+@code {
+    private ReCaptchaResponse? validationResult;
+
+    private async Task ValidateRecaptcha()
+    {
+        var token = await RecaptchaService.Execute();
+
+        if (!string.IsNullOrEmpty(token))
+        {
+            var response = await Http.PostAsJsonAsync(&quot;/api/recaptcha/validate&quot;, 
+                new { token });
+
+            if (response.IsSuccessStatusCode)
+            {
+                validationResult = await response.Content
+                    .ReadFromJsonAsync&lt;ReCaptchaResponse&gt;();
+            }
+        }
+    }
+
+    private Severity GetSeverity() =&gt; 
+        validationResult?.Success == true ? Severity.Success : Severity.Error;
+}
+</code></pre>
+<h3 id="4-model-si-configurare">4. Model și configurare</h3>
+<h4 id="recaptchaoptions">ReCaptchaOptions</h4>
+<pre><code class="language-csharp">public class ReCaptchaOptions
+{
+    public string SiteKey { get; set; }
+    public string SecretKey { get; set; }
+    public ReCaptchaVersion Version { get; set; } = ReCaptchaVersion.V3;
+    public bool ValidateAuthenticated { get; set; } = false;
+}
+
+public enum ReCaptchaVersion
+{
+    V2,
+    V2Invisible,
+    V3
+}
+</code></pre>
+<h4 id="recaptcharesponse">ReCaptchaResponse</h4>
+<pre><code class="language-csharp">public class ReCaptchaResponse
+{
+    public ReCaptchaResponseStatusEnum Status { get; set; }
+    public string Message { get; set; }
+    public bool Success =&gt; Status == ReCaptchaResponseStatusEnum.Success;
+}
+
+public enum ReCaptchaResponseStatusEnum
+{
+    Failed,
+    Success,
+    Skipped
+}
+</code></pre>
+<h3 id="5-servicii-disponibile">5. Servicii disponibile</h3>
+<h4 id="irecaptchaservice-client-side">IRecaptchaService (Client-side)</h4>
+<table>
+<thead>
+<tr>
+<th>Metodă</th>
+<th>Descriere</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Execute()</code></td>
+<td>Execută validarea și returnează token</td>
+<td><code>Task&lt;string&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="irecaptchavalidationservice-server-side">IRecaptchaValidationService (Server-side)</h4>
+<table>
+<thead>
+<tr>
+<th>Metodă</th>
+<th>Descriere</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Validate(string token, HttpContext context)</code></td>
+<td>Validează token-ul cu Google API</td>
+<td><code>Task&lt;ReCaptchaResponse&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-integrare-cu-alte-componente">6. Integrare cu alte componente</h3>
+<h4 id="in-wizard-pentru-formulare-multi-step">În Wizard pentru formulare multi-step</h4>
+<pre><code class="language-razor">&lt;FodWizard&gt;
+    &lt;Steps&gt;
+        &lt;FodWizardStep Title=&quot;Date personale&quot;&gt;
+            &lt;!-- Câmpuri formular --&gt;
+        &lt;/FodWizardStep&gt;
+
+        &lt;FodWizardStep Title=&quot;Verificare&quot;&gt;
+            &lt;!-- Rezumat date --&gt;
+            &lt;FodRecaptcha /&gt;
+        &lt;/FodWizardStep&gt;
+    &lt;/Steps&gt;
+&lt;/FodWizard&gt;
+</code></pre>
+<h4 id="in-modal-pentru-actiuni-critice">În Modal pentru acțiuni critice</h4>
+<pre><code class="language-razor">&lt;FodModal Show=&quot;@showDeleteModal&quot;&gt;
+    &lt;FodModalContent&gt;
+        &lt;FodModalHeader&gt;
+            &lt;FodText Typo=&quot;Typo.h6&quot;&gt;Confirmare ștergere&lt;/FodText&gt;
+        &lt;/FodModalHeader&gt;
+        &lt;FodModalBody&gt;
+            &lt;FodText&gt;Sunteți sigur că doriți să ștergeți acest element?&lt;/FodText&gt;
+            &lt;FodRecaptcha /&gt;
+        &lt;/FodModalBody&gt;
+        &lt;FodModalFooter&gt;
+            &lt;FodButton OnClick=&quot;DeleteWithRecaptcha&quot; Color=&quot;FodColor.Error&quot;&gt;
+                Șterge
+            &lt;/FodButton&gt;
+            &lt;FodButton OnClick=&quot;@(() =&gt; showDeleteModal = false)&quot;&gt;
+                Anulează
+            &lt;/FodButton&gt;
+        &lt;/FodModalFooter&gt;
+    &lt;/FodModalContent&gt;
+&lt;/FodModal&gt;
+</code></pre>
+<h3 id="7-gestionarea-erorilor">7. Gestionarea erorilor</h3>
+<pre><code class="language-razor">@code {
+    private async Task&lt;bool&gt; ValidateWithRecaptcha()
+    {
+        try
+        {
+            var token = await RecaptchaService.Execute();
+
+            if (string.IsNullOrEmpty(token))
+            {
+                // Token gol - posibil utilizator blocat
+                await ShowError(&quot;Verificarea de securitate a eșuat. &quot; +
+                    &quot;Vă rugăm reîncărcați pagina.&quot;);
+                return false;
+            }
+
+            return true;
+        }
+        catch (JSException jsEx)
+        {
+            // Eroare JavaScript - script ne-încărcat
+            await ShowError(&quot;Scriptul de securitate nu s-a încărcat. &quot; +
+                &quot;Verificați conexiunea.&quot;);
+            return false;
+        }
+        catch (TaskCanceledException)
+        {
+            // Timeout
+            await ShowError(&quot;Verificarea a expirat. Încercați din nou.&quot;);
+            return false;
+        }
+        catch (Exception ex)
+        {
+            // Altă eroare
+            await ShowError(&quot;Eroare neașteptată la verificare.&quot;);
+            return false;
+        }
+    }
+}
+</code></pre>
+<h3 id="8-configurare-avansata">8. Configurare avansată</h3>
+<h4 id="configurare-cu-environment-variables">Configurare cu environment variables</h4>
+<pre><code class="language-csharp">// Program.cs
+builder.Services.Configure&lt;ReCaptchaOptions&gt;(options =&gt;
+{
+    options.SiteKey = builder.Configuration[&quot;RECAPTCHA_SITE_KEY&quot;] 
+        ?? builder.Configuration[&quot;ReCaptcha:SiteKey&quot;];
+    options.SecretKey = builder.Configuration[&quot;RECAPTCHA_SECRET_KEY&quot;] 
+        ?? builder.Configuration[&quot;ReCaptcha:SecretKey&quot;];
+    options.Version = Enum.Parse&lt;ReCaptchaVersion&gt;(
+        builder.Configuration[&quot;ReCaptcha:Version&quot;] ?? &quot;V3&quot;);
+});
+</code></pre>
+<h4 id="middleware-pentru-validare-automata">Middleware pentru validare automată</h4>
+<pre><code class="language-csharp">public class RecaptchaMiddleware
+{
+    private readonly RequestDelegate _next;
+    private readonly IRecaptchaValidationService _recaptchaService;
+
+    public RecaptchaMiddleware(
+        RequestDelegate next, 
+        IRecaptchaValidationService recaptchaService)
+    {
+        _next = next;
+        _recaptchaService = recaptchaService;
+    }
+
+    public async Task InvokeAsync(HttpContext context)
+    {
+        // Verifică doar pentru anumite endpoint-uri
+        if (ShouldValidateRecaptcha(context))
+        {
+            var token = context.Request.Headers[&quot;X-Recaptcha-Token&quot;]
+                .FirstOrDefault();
+
+            if (string.IsNullOrEmpty(token))
+            {
+                context.Response.StatusCode = 400;
+                await context.Response.WriteAsync(&quot;reCAPTCHA token required&quot;);
+                return;
+            }
+
+            var result = await _recaptchaService.Validate(token, context);
+            if (!result.Success)
+            {
+                context.Response.StatusCode = 403;
+                await context.Response.WriteAsync(&quot;reCAPTCHA validation failed&quot;);
+                return;
+            }
+        }
+
+        await _next(context);
+    }
+
+    private bool ShouldValidateRecaptcha(HttpContext context)
+    {
+        // Logica pentru determinarea endpoint-urilor protejate
+        return context.Request.Path.StartsWithSegments(&quot;/api/public&quot;);
+    }
+}
+</code></pre>
+<h3 id="9-testare">9. Testare</h3>
+<h4 id="mock-pentru-development">Mock pentru development</h4>
+<pre><code class="language-csharp">public class MockRecaptchaService : IRecaptchaService
+{
+    public Task&lt;string&gt; Execute()
+    {
+        // În development, returnează întotdeauna un token valid
+        return Task.FromResult(&quot;mock-recaptcha-token&quot;);
+    }
+}
+
+// În Program.cs pentru development
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddScoped&lt;IRecaptchaService, MockRecaptchaService&gt;();
+}
+</code></pre>
+<h3 id="10-monitorizare-si-analiza">10. Monitorizare și analiză</h3>
+<pre><code class="language-csharp">// Server-side logging
+public class RecaptchaValidationService : IRecaptchaValidationService
+{
+    private readonly ILogger&lt;RecaptchaValidationService&gt; _logger;
+
+    public async Task&lt;ReCaptchaResponse&gt; Validate(string token, HttpContext context)
+    {
+        // ... cod validare ...
+
+        if (!googleResponse.Success)
+        {
+            _logger.LogWarning(&quot;reCAPTCHA validation failed for IP: {IP}, &quot; +
+                &quot;Errors: {Errors}&quot;, 
+                context.Connection.RemoteIpAddress,
+                string.Join(&quot;, &quot;, googleResponse.ErrorCodes));
+        }
+
+        // Metrici pentru monitorizare
+        RecaptchaMetrics.RecordValidation(googleResponse.Success);
+
+        return response;
+    }
+}
+</code></pre>
+<h3 id="11-bune-practici">11. Bune practici</h3>
+<ol>
+<li><strong>Întotdeauna validați pe server</strong> - Nu vă bazați doar pe validarea client</li>
+<li><strong>Gestionați erori</strong> - Oferiți feedback clar utilizatorilor</li>
+<li><strong>Timeout-uri</strong> - Setați timeout pentru cererile API</li>
+<li><strong>Rate limiting</strong> - Combinați cu rate limiting pentru protecție extra</li>
+<li><strong>Monitorizare</strong> - Urmăriți rata de succes/eșec</li>
+<li><strong>Fallback</strong> - Aveți o strategie pentru când serviciul nu e disponibil</li>
+</ol>
+<h3 id="12-troubleshooting">12. Troubleshooting</h3>
+<h4 id="recaptcha-nu-se-incarca">reCAPTCHA nu se încarcă</h4>
+<ul>
+<li>Verificați că site key este corect</li>
+<li>Verificați că domeniul este înregistrat în Google Console</li>
+<li>Verificați blocarea scripturilor în browser</li>
+</ul>
+<h4 id="token-invalid-pe-server">Token invalid pe server</h4>
+<ul>
+<li>Verificați că secret key este corect</li>
+<li>Verificați că token-ul nu a expirat (2 minute)</li>
+<li>Verificați că IP-ul match-uiește</li>
+</ul>
+<h4 id="utilizatori-blocati-incorect">Utilizatori blocați incorect</h4>
+<ul>
+<li>Ajustați pragul de scor în Google Console</li>
+<li>Implementați logică de retry</li>
+<li>Oferiți metodă alternativă de verificare</li>
+</ul>
+<h3 id="13-limitari">13. Limitări</h3>
+<ul>
+<li>Token-urile expiră după 2 minute</li>
+<li>Necesită conexiune internet</li>
+<li>Poate bloca utilizatori legitimi (false pozitive)</li>
+<li>Nu funcționează în browsere foarte vechi</li>
+<li>Limită de cereri per cheie</li>
+</ul>
+<h3 id="14-concluzie">14. Concluzie</h3>
+<p><code>FodRecaptcha</code> oferă o integrare simplă și eficientă a Google reCAPTCHA în aplicații Blazor. Cu suport pentru validare pe client și server, configurare flexibilă și gestionare automată a scripturilor, componenta asigură protecție robustă împotriva spam-ului și automatizărilor abuzive.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
