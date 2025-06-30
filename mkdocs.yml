@@ -49,6 +49,10 @@ nav:
           - Container: componente/FodContainer.md
           - Custom Input Select: componente/FodCustomInputSelect.md
           - DataTable: componente/FodDataTable.md
+          - Column: componente/FodColumn.md
+          - Tr: componente/FodTr.md
+          - Td: componente/FodTd.md
+          - Th: componente/FodTh.md
           - DatePicker: componente/FodDatePicker.md
           - DateRangePicker: componente/FodDateRangePicker.md
           - Drawer: componente/FodDrawer.md
@@ -116,6 +120,7 @@ nav:
           - FodTooltip: componente/FodTooltip.md
           - User Info: componente/FodUserInfo.md
           - Wizard: componente/FodWizard.md
+          - WizardStep: componente/FodWizardStep.md
           - Virtualize: componente/FodVirtualize.md
           - Mask: componente/FodMask.md
           - FileViewer: componente/FileViewer.md
