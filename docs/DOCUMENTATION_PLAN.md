@@ -1,11 +1,11 @@
 # Plan de Documentare FOD.Components
 
-## Status Curent (Actualizat: 2025-06-27)
+## Status Curent (Actualizat: 2025-06-30)
 - **Total componente**: ~168
-- **Componente documentate**: 117 ✅
-- **Componente de documentat**: ~51
-- **Servicii documentate**: 15 ✅
-- **Servicii de documentat**: ~25
+- **Componente documentate**: 133 ✅
+- **Componente de documentat**: ~35
+- **Servicii documentate**: 42 ✅
+- **Servicii de documentat**: ~15+ (servicii server-side și client-side rămase)
 
 ## Componente Prioritare de Documentat
 
@@ -210,6 +210,20 @@
 - ContextService (complet)
 
 ### Total Progres:
-- 41 componente noi documentate
-- 13 servicii noi documentate
+- 46 componente noi documentate (41 + 5 astăzi)
+- 15 servicii noi documentate (13 + 2 astăzi)
 - Actualizat mkdocs.yml cu toate intrările noi
+
+### Componente Documentate Astăzi (Sesiunea Curentă):
+- FodMenuItem
+- FodNavGroup
+- FodNavLink
+- FodUserInfo
+- FodInputControl
+- FodInlineCheckbox
+- FodLanguage
+- FodServiceRequestsStatistics
+
+### Servicii Documentate Astăzi (Sesiunea Curentă):
+- ConfigurationService
+- SelectableItemsService

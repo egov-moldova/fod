@@ -67,22 +67,30 @@ nav:
           - Input 1: componente/FodInput1.md
           - Input Adornment: componente/FodInputAdornment.md
           - Input Checkbox: componente/FodInputCheckbox.md
+          - Input Control: componente/FodInputControl.md
           - Input File: componente/FodInputFile.md
           - Input Filtered Select: componente/FodInputFilteredSelect.md
+          - Inline Checkbox: componente/FodInlineCheckbox.md
           - Input Label: componente/FodInputLabel.md
           - Input Nullable Number: componente/FodInputNullableNumber.md
           - Input Number: componente/FODInputNumber.md
+          - Language: componente/FodLanguage.md
           - Input Radio: componente/FODInputRadio.md
           - Input Radio Group: componente/FODInputRadioGroup.md
           - Input Select: componente/FODInputSelect.md
           - Input Text: componente/FODInputText.md
           - Input Wrapper: componente/FODInputWrapper.md
           - Layout: componente/FodLayout.md
+          - Link: componente/FodLink.md
           - List: componente/FodList.md
+          - List Item: componente/FodListItem.md
           - Loading: componente/FodLoading.md
           - Menu: componente/FodMenu.md
+          - MenuItem: componente/FodMenuItem.md
           - Modal: componente/FodModal.md
           - Nav Menu: componente/FodNavMenu.md
+          - Nav Group: componente/FodNavGroup.md
+          - Nav Link: componente/FodNavLink.md
           - NotificationProvider: componente/FodNotificationProvider.md
           - Number Box: componente/FodNumberBox.md
           - Overlay: componente/FodOverlay.md
@@ -102,9 +110,11 @@ nav:
           - Text: componente/FodText.md
           - TextArea: componente/FodTextArea.md
           - Textbox: componente/FodTextbox.md
+          - TextField: componente/FodTextField.md
           - Toolbar: componente/FodToolbar.md
           - Tooltip: componente/Tooltip.md
           - FodTooltip: componente/FodTooltip.md
+          - User Info: componente/FodUserInfo.md
           - Wizard: componente/FodWizard.md
           - Virtualize: componente/FodVirtualize.md
           - Mask: componente/FodMask.md
@@ -115,6 +125,7 @@ nav:
     - Componente business:
           - Afișarea costului: componente/bussiness/FodRequestCost.md
           - Datele solicitantului: componente/bussiness/FodRequestor.md
+          - Person: componente/FodPerson.md
           - Status cerere: componente/business/FodRequestStatus.md
           - Afișarea Datelor solicitantului: componente/bussiness/FodRequestorDisplay.md
           - Apostila: componente/FodApostila.md
@@ -122,6 +133,7 @@ nav:
           - Delivery Display: componente/FodDeliveryDisplay.md
           - Service Request Status: componente/FodServiceRequestStatus.md
           - Service Request Status Response: componente/FodServiceRequestStatusResponse.md
+          - Service Requests Statistics: componente/FodServiceRequestsStatistics.md
           - Verify Document: componente/FodVerifyDocument.md
           - Verify Document Response: componente/FodVerifyDocumentResponse.md
           - Feedback: componente/FodFeedback.md
@@ -132,21 +144,43 @@ nav:
     - Servicii:
           - ICurrentUserContextService: servicii/ICurrentUserContextService.md
           - IRequestService: servicii/IRequestService.md
+          - ApostilaComponentService: servicii/ApostilaComponentService.md
+          - AttributeHandlerService: servicii/AttributeHandlerService.md
           - AuthenticationService: servicii/AuthenticationService.md
           - BreakpointService: servicii/BreakpointService.md
+          - CaptchaCallbackService: servicii/CaptchaCallbackService.md
           - ConfigurationService: servicii/ConfigurationService.md
           - ContextService: servicii/ContextService.md
+          - CostCalculatorService: servicii/CostCalculatorService.md
           - CultureService: servicii/CultureService.md
+          - DataRequestHandlerService: servicii/DataRequestHandlerService.md
+          - ExceptionDaysService: servicii/ExceptionDaysService.md
+          - FeedbackComponentService: servicii/FeedbackComponentService.md
           - FileUploadService: servicii/FileUploadService.md
           - FodNotificationService: servicii/FodNotificationService.md
           - FodPopoverService: servicii/FodPopoverService.md
           - JsApiService: servicii/JsApiService.md
+          - NameService: servicii/NameService.md
+          - PersonComponentService: servicii/PersonComponentService.md
           - PrintingService: servicii/PrintingService.md
           - RecaptchaService: servicii/RecaptchaService.md
+          - RequestStatusService: servicii/RequestStatusService.md
+          - RequestorComponentService: servicii/RequestorComponentService.md
+          - ResizeBasedService: servicii/ResizeBasedService.md
           - ScrollManager: servicii/ScrollManager.md
           - SelectableItemsService: servicii/SelectableItemsService.md
+          - ServiceRequestStatusService: servicii/ServiceRequestStatusService.md
+          - ServiceRequestStatisticsService: servicii/ServiceRequestStatisticsService.md
           - SingleFileUploadService: servicii/SingleFileUploadService.md
           - UserService: servicii/UserService.md
+          - ValidateExtrasService: servicii/ValidateExtrasService.md
+          - VerifyDocumentService: servicii/VerifyDocumentService.md
+          - KeyInterceptor: servicii/KeyInterceptor.md
+          - OrderNumberGenerator: servicii/OrderNumberGenerator.md
+          - EstimatedDateCalculator: servicii/EstimatedDateCalculator.md
+          - WorkingProgramService: servicii/WorkingProgramService.md
+          - HashGenerator: servicii/HashGenerator.md
+          - XmlGenerator: servicii/XmlGenerator.md
     - Modele:
           - UserContext: modele/UserContext.md
           - FodRequestorModel: modele/IRequestor.md
