@@ -48,6 +48,7 @@ nav:
           - Collapse: componente/FodCollapse.md
           - Container: componente/FodContainer.md
           - Custom Input Select: componente/FodCustomInputSelect.md
+          - Custom Multiple Group Select: componente/FodCustomMultipleGroupSelect.md
           - DataTable: componente/FodDataTable.md
           - Column: componente/FodColumn.md
           - Tr: componente/FodTr.md
@@ -133,6 +134,7 @@ nav:
           - Person: componente/FodPerson.md
           - Status cerere: componente/business/FodRequestStatus.md
           - Afișarea Datelor solicitantului: componente/bussiness/FodRequestorDisplay.md
+          - ApplicationModelLoader: componente/FodApplicationModelLoader.md
           - Apostila: componente/FodApostila.md
           - Apostila Display: componente/FodApostilaDisplay.md
           - Delivery Display: componente/FodDeliveryDisplay.md
