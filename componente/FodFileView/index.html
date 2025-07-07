@@ -1,0 +1,7464 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../FileViewer/">
+      
+      
+        <link rel="next" href="../FileList/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>FileView - Fod Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fodfileview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Fod Documentation" class="md-header__button md-logo" aria-label="Fod Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fod Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FileView
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Fod Documentation" class="md-nav__button md-logo" aria-label="Fod Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Fod Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Acasă
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Aplicația Fod
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Aplicația Fod
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducere
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/cerinte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cerinte
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/cunostinte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cunostinte
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/solution%20create/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Crearea soluției
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/structura%20solutiei/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Structura soluției
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/frontoffice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Descriere frontoffice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/creare%20proiect%20frontoffice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creare proiect Frontoffice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/frontoffice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Descriere frontoffice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/instalare%20librarii%20fod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalare librarii fod
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/utilizarea%20stilurilor%20fod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Utilizarea stilurilor FOD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/inregistrarea%20serviciilor%20client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Înregistrarea serviciilor client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/ghid-depunere-solicitare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ghid de depunere a unei solicitari
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/depunere/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Depunere solicitare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/detalii%20solicitant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pasul Detaliile solicitantului
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/detalii%20serviciu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pasul Detaliile serviciului
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/apostilare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pasul de apostilare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/mod%20receptionare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pasul modului de recepționare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/confirmarea%20datelor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pasul de confirmare a datelor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/semnare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pasul de semnare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/achitare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pasul de achitare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/finalizare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pasul de finalizare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aplicatia/verificare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pagina de verificare a solicitării
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Configurare Fod
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Configurare Fod
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configurare/roluri%20implicite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roluri și context implicite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configurare/configurare%20roluri%20implicite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configurare roluri implicite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configurare/configurare%20roluri%20particularizate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configurare roluri particularizate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configurare/mpass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MPass
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configurare/configurare%20limbilor%20disponibile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Limbile disponibile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Componente
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Componente
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodAlert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alert
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodBadge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Badge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodButton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Button
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodButtonGroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Button Group
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodCard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Card
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodCardWrapper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CardWrapper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodCheckbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Checkbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodCheckBox2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CheckBox2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodChip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chips
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodChipSet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ChipSet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodCollapse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Collapse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodContainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Container
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodCustomInputSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom Input Select
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodCustomMultipleGroupSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom Multiple Group Select
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodDataTable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DataTable
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodDisplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Display
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodColumn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Column
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodTr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodTd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Td
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodTh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Th
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodTHeadRow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    THeadRow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodTFootRow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TFootRow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodTableSortLabel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TableSortLabel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodDatePicker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DatePicker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodDateRangePicker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DateRangePicker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodDrawer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Drawer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodDropdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dropdown
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodExceptionDays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exception Days
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodExpansionPanels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Expansion Panels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodFaqViewer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ Viewer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodFooter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Footer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodGrid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodGroupSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Group Select
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodHeader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Header
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodIcon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Icon
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodIconButton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Icon Button
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodImage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Image
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInput/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInput1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInputAdornment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Adornment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInputCheckbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Checkbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInputControl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInputFile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input File
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInputFilteredSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Filtered Select
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInlineCheckbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inline Checkbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInputLabel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Label
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodInputNullableNumber/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Nullable Number
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FODInputNumber/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Number
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodLanguage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Language
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FODInputRadio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Radio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FODInputRadioGroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Radio Group
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FODInputSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Select
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FODInputText/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Text
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FODInputWrapper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Wrapper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodLayout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodLink/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Link
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodMainContent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MainContent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodListItem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List Item
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodLoading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Loading
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodLoadingCircular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Loading Circular
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodLoadingLinear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Loading Linear
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodMenu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Menu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodMenuItem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MenuItem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodModal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodNavMenu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nav Menu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodNavGroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nav Group
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodNavLink/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nav Link
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodNotificationProvider/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NotificationProvider
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodNumberBox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Number Box
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodOverlay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overlay
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodPageContentNavigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Page Content Navigation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodPagination/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pagination
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodPaper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Paper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodPopover/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Popover
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodRadio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Radio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodRangeInput/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Range Input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodRating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rating
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodRecaptcha/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recaptcha
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodSearchSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Search Select
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Select
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodSelect1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Select1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodSpacer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Spacer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodTabControl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tab Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FODTable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Table
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodText/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Text
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodTextArea/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TextArea
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodTextbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Textbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodTextField/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TextField
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodToolbar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Toolbar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tooltip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tooltip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodTooltip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodTooltip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodUserInfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User Info
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodValidateExtras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ValidateExtras
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodWizard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wizard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodWizardStep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WizardStep
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodWizardSteps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WizardSteps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodWizardLoadingCircle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WizardLoadingCircle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodVirtualize/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Virtualize
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodMask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FileViewer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FileViewer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    FileView
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    FileView
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documentatie-pentru-componenta-fodfileview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentație pentru componenta FodFileView
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentație pentru componenta FodFileView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-descriere-generala" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Descriere Generală
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-utilizare-de-baza" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Utilizare de Bază
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Utilizare de Bază">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vizualizator-simplu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vizualizator simplu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrare-cu-filelist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrare cu FileList
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-parametri-si-metode" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Parametri și Metode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-model-fileviewmodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Model FileViewModel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-exemple-avansate" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Exemple Avansate
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Exemple Avansate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#galerie-de-imagini-cu-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Galerie de imagini cu preview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewer-cu-toolbar-actiuni" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewer cu toolbar acțiuni
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-stilizare-si-personalizare" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Stilizare și Personalizare
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-integrare-cu-servicii" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Integrare cu Servicii
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Integrare cu Servicii">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-pentru-file-viewing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service pentru file viewing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-scenarii-de-utilizare" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Scenarii de Utilizare
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Scenarii de Utilizare">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#document-viewer-cu-navigare" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document viewer cu navigare
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-suport-pentru-tipuri-de-fisiere" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Suport pentru Tipuri de Fișiere
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fisierul-nu-se-afiseaza" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fișierul nu se afișează
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modal-nu-se-deschide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modal nu se deschide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-limitari-si-alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Limitări și Alternative
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-extensibilitate" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Extensibilitate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-concluzie" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Concluzie
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FileList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FileList
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodNavigate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Navigate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FODLogin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Login
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LanguageSelector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LanguageSelector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CultureSelector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CultureSelector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OutsideHandleContainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OutsideHandleContainer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Componente business
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Componente business
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bussiness/FodRequestCost/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Afișarea costului
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bussiness/FodRequestor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datele solicitantului
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodPerson/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Person
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../business/FodRequestStatus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Status cerere
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bussiness/FodRequestorDisplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Afișarea Datelor solicitantului
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodApplicationModelLoader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ApplicationModelLoader
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodApostila/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apostila
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodApostilaDisplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apostila Display
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodDeliveryDisplay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Delivery Display
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodServiceRequestStatus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service Request Status
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodServiceRequestStatusResponse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service Request Status Response
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodServiceRequestsStatistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service Requests Statistics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodVerifyDocument/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verify Document
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodVerifyDocumentResponse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verify Document Response
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodFeedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Feedback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodFeedbackBadge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Feedback Badge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodContextProvider/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Context Provider
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodContextSelector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Context Selector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodContextSelectorCard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Context Selector Card
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodContextCleaner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Context Cleaner
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodRequestOptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Request Options
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FodFilter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Filter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MPayInvoiceButton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MPay Invoice Button
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FODInputOnBehalfOfRadioGroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    On Behalf Of Radio Group
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Servicii
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Servicii
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/ICurrentUserContextService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ICurrentUserContextService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/IRequestService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IRequestService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/ApostilaComponentService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ApostilaComponentService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/AttributeHandlerService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AttributeHandlerService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/AuthenticationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AuthenticationService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/BreakpointService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BreakpointService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/CaptchaCallbackService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CaptchaCallbackService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/ConfigurationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ConfigurationService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/ContextService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ContextService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/CostCalculatorService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CostCalculatorService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/CultureService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CultureService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/DataRequestHandlerService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DataRequestHandlerService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/ExceptionDaysService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ExceptionDaysService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/FeedbackComponentService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FeedbackComponentService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/FileUploadService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FileUploadService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/FodNotificationService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodNotificationService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/FodPopoverService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodPopoverService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/JsApiService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JsApiService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/NameService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NameService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/PersonComponentService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PersonComponentService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/PrintingService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PrintingService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/RecaptchaService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RecaptchaService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/RequestStatusService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RequestStatusService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/RequestorComponentService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RequestorComponentService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/ResizeBasedService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ResizeBasedService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/ScrollManager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ScrollManager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/SelectableItemsService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SelectableItemsService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/ServiceRequestStatusService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ServiceRequestStatusService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/ServiceRequestStatisticsService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ServiceRequestStatisticsService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/SingleFileUploadService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SingleFileUploadService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/UserService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UserService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/ValidateExtrasService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ValidateExtrasService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/VerifyDocumentService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VerifyDocumentService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/KeyInterceptor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    KeyInterceptor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/OrderNumberGenerator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OrderNumberGenerator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/EstimatedDateCalculator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EstimatedDateCalculator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/WorkingProgramService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WorkingProgramService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/HashGenerator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HashGenerator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/XmlGenerator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    XmlGenerator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/FaqService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FaqService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../servicii/ApplicationModelLoader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ApplicationModelLoader
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Modele
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Modele
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modele/UserContext/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UserContext
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modele/IRequestor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestorModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Database Entities
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Database Entities
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/BaseEntity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BaseEntity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/ExceptionWorkingProgram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ExceptionWorkingProgram
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/File/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FileContent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FileContent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodAdditionalData/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodAdditionalData
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodAdditionalDataTypeValue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodAdditionalDataTypeValue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodAdditionalInvoice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodAdditionalInvoice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodAdditionalRequest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodAdditionalRequest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodAdditionalServiceRequest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodAdditionalServiceRequest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodApostilationDetails/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodApostilationDetails
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodDocumentType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodDocumentType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodExecutionTerm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodExecutionTerm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodMDocsDocumentShare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodMDocsDocumentShare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodNotificationType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodNotificationType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodPickupLocation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodPickupLocation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodPictures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodPictures
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestDelivery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestDelivery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestDeliveryStatusLog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestDeliveryStatusLog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestFile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestFile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestJson/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestJson
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestJsonSignature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestJsonSignature
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestPayment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestPayment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestTypeService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestTypeService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodRequestorStatute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodRequestorStatute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodResponseDataMDocsDocument/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodResponseDataMDocsDocument
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodResponseDocument/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodResponseDocument
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodResponseJson/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodResponseJson
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodResponseJsonSignature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodResponseJsonSignature
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodService/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodService
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodServiceAdditionalData/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodServiceAdditionalData
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodServiceDocumentType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodServiceDocumentType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodServiceProvider/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodServiceProvider
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodServiceRequest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodServiceRequest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodServiceRequestAdditionalData/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodServiceRequestAdditionalData
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodServiceRequestFile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodServiceRequestFile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodServiceRequestResponseData/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodServiceRequestResponseData
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodSignature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodSignature
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodTermsAndCondition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodTermsAndCondition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodUserProfileOrganization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodUserProfileOrganization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodUserProfileRole/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodUserProfileRole
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/FodUserSignature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FodUserSignature
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/JsonSchema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JsonSchema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/RSSPAExecutionTerm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RSSPAExecutionTerm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/ServiceRequestDelivery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ServiceRequestDelivery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/ServiceRequestDeliveryStatusLog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ServiceRequestDeliveryStatusLog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/ServiceRequestDiscount/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ServiceRequestDiscount
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/SignableDocument/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SignableDocument
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/UserProfile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UserProfile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/entities/WorkingProgram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WorkingProgram
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documentatie-pentru-componenta-fodfileview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentație pentru componenta FodFileView
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentație pentru componenta FodFileView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-descriere-generala" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Descriere Generală
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-utilizare-de-baza" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Utilizare de Bază
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Utilizare de Bază">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vizualizator-simplu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vizualizator simplu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrare-cu-filelist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrare cu FileList
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-parametri-si-metode" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Parametri și Metode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-model-fileviewmodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Model FileViewModel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-exemple-avansate" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Exemple Avansate
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Exemple Avansate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#galerie-de-imagini-cu-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Galerie de imagini cu preview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewer-cu-toolbar-actiuni" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewer cu toolbar acțiuni
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-stilizare-si-personalizare" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Stilizare și Personalizare
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-integrare-cu-servicii" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Integrare cu Servicii
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Integrare cu Servicii">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-pentru-file-viewing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service pentru file viewing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-scenarii-de-utilizare" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Scenarii de Utilizare
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Scenarii de Utilizare">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#document-viewer-cu-navigare" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document viewer cu navigare
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-suport-pentru-tipuri-de-fisiere" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Suport pentru Tipuri de Fișiere
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fisierul-nu-se-afiseaza" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fișierul nu se afișează
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modal-nu-se-deschide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modal nu se deschide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-limitari-si-alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Limitări și Alternative
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-extensibilitate" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Extensibilitate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-concluzie" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Concluzie
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="fodfileview">FodFileView</h1>
+<h2 id="documentatie-pentru-componenta-fodfileview">Documentație pentru componenta FodFileView</h2>
+<h3 id="1-descriere-generala">1. Descriere Generală</h3>
+<p><code>FodFileView</code> este o componentă pentru vizualizarea fișierelor într-un modal. Suportă afișarea imaginilor direct și a altor tipuri de fișiere prin iframe, oferind o experiență de previzualizare integrată pentru documentele încărcate.</p>
+<p>Caracteristici principale:
+- Vizualizare fișiere în modal responsive
+- Suport pentru imagini cu scalare automată
+- Afișare documente (PDF, etc.) prin iframe
+- Loading state pentru încărcare
+- Integrare cu IFileUploadService
+- API endpoint pentru servirea fișierelor
+- Închidere cu ESC</p>
+<h3 id="2-utilizare-de-baza">2. Utilizare de Bază</h3>
+<h4 id="vizualizator-simplu">Vizualizator simplu</h4>
+<pre><code class="language-razor">&lt;FodFileView @ref=&quot;fileViewer&quot; /&gt;
+
+&lt;FodButton OnClick=&quot;() =&gt; fileViewer.OpenFileViewAsync(fileId)&quot;&gt;
+    Vizualizează fișier
+&lt;/FodButton&gt;
+
+@code {
+    private FodFileView fileViewer;
+    private Guid fileId = Guid.Parse(&quot;...&quot;);
+}
+</code></pre>
+<h4 id="integrare-cu-filelist">Integrare cu FileList</h4>
+<pre><code class="language-razor">&lt;FileList Model=&quot;@uploadedFiles&quot;&gt;
+    &lt;PreviewButton&gt;
+        &lt;FodButton OnClick=&quot;() =&gt; OpenPreview(context.Id)&quot;&gt;
+            &lt;FodIcon Icon=&quot;@FodIcons.Material.Filled.Preview&quot; /&gt;
+        &lt;/FodButton&gt;
+    &lt;/PreviewButton&gt;
+&lt;/FileList&gt;
+
+&lt;FodFileView @ref=&quot;fileViewer&quot; 
+             OnOpen=&quot;HandleFileOpened&quot;
+             OnCloase=&quot;HandleFileClosed&quot; /&gt;
+
+@code {
+    private FodFileView fileViewer;
+
+    private async Task OpenPreview(Guid fileId)
+    {
+        await fileViewer.OpenFileViewAsync(fileId);
+    }
+
+    private void HandleFileOpened()
+    {
+        Console.WriteLine(&quot;File viewer opened&quot;);
+    }
+
+    private void HandleFileClosed()
+    {
+        Console.WriteLine(&quot;File viewer closed&quot;);
+    }
+}
+</code></pre>
+<h3 id="3-parametri-si-metode">3. Parametri și Metode</h3>
+<table>
+<thead>
+<tr>
+<th>Parametru/Metodă</th>
+<th>Tip</th>
+<th>Descriere</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OpenFileViewer</code></td>
+<td><code>bool</code></td>
+<td>Stare deschidere modal (Parameter)</td>
+</tr>
+<tr>
+<td><code>OnCloase</code></td>
+<td><code>EventCallback</code></td>
+<td>Eveniment la închidere (typo în original)</td>
+</tr>
+<tr>
+<td><code>OnOpen</code></td>
+<td><code>EventCallback</code></td>
+<td>Eveniment la deschidere</td>
+</tr>
+<tr>
+<td><code>FileId</code></td>
+<td><code>Guid</code></td>
+<td>ID-ul fișierului de afișat</td>
+</tr>
+<tr>
+<td><code>OpenFileViewAsync(Guid id)</code></td>
+<td><code>Task</code></td>
+<td>Metodă publică pentru deschidere</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-model-fileviewmodel">4. Model FileViewModel</h3>
+<pre><code class="language-csharp">public class FileViewModel
+{
+    public Guid Id { get; set; }
+    public string FileName { get; set; }
+    public string FileType { get; set; }
+    public string ContentType { get; set; }
+    public long FileSize { get; set; }
+    // alte proprietăți
+}
+</code></pre>
+<h3 id="5-exemple-avansate">5. Exemple Avansate</h3>
+<h4 id="galerie-de-imagini-cu-preview">Galerie de imagini cu preview</h4>
+<pre><code class="language-razor">&lt;div class=&quot;image-gallery&quot;&gt;
+    &lt;FodGrid container spacing=&quot;2&quot;&gt;
+        @foreach (var image in imageFiles)
+        {
+            &lt;FodGrid item xs=&quot;6&quot; sm=&quot;4&quot; md=&quot;3&quot;&gt;
+                &lt;div class=&quot;gallery-item&quot; @onclick=&quot;() =&gt; PreviewImage(image.Id)&quot;&gt;
+                    &lt;img src=&quot;@GetThumbnailUrl(image.Id)&quot; 
+                         alt=&quot;@image.FileName&quot;
+                         class=&quot;img-thumbnail&quot; /&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;
+                        &lt;FodIcon Icon=&quot;@FodIcons.Material.Filled.ZoomIn&quot; 
+                                 Color=&quot;FodColor.White&quot; /&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/FodGrid&gt;
+        }
+    &lt;/FodGrid&gt;
+&lt;/div&gt;
+
+&lt;FodFileView @ref=&quot;imageViewer&quot; /&gt;
+
+@code {
+    private FodFileView imageViewer;
+    private List&lt;FileInfo&gt; imageFiles;
+
+    private async Task PreviewImage(Guid imageId)
+    {
+        await imageViewer.OpenFileViewAsync(imageId);
+    }
+
+    private string GetThumbnailUrl(Guid fileId)
+    {
+        return $&quot;api/fod/file-thumbnail/{fileId}&quot;;
+    }
+}
+
+&lt;style&gt;
+    .gallery-item {
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .gallery-item .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .gallery-item:hover .overlay {
+        opacity: 1;
+    }
+&lt;/style&gt;
+</code></pre>
+<h4 id="viewer-cu-toolbar-actiuni">Viewer cu toolbar acțiuni</h4>
+<pre><code class="language-razor">@* ExtendedFileView.razor *@
+@inherits FodComponent
+
+&lt;FodModal Show=&quot;@Show&quot;
+          OnClosed=&quot;OnCloseAsync&quot;
+          CloseOnEscape=&quot;true&quot;
+          Scrollable=&quot;true&quot;
+          Size=&quot;FodSize.Large&quot;&gt;
+    &lt;HeaderTemplate&gt;
+        &lt;div class=&quot;d-flex justify-content-between align-items-center w-100&quot;&gt;
+            &lt;FodText Typo=&quot;Typo.h6&quot;&gt;@fileInfo?.FileName&lt;/FodText&gt;
+            &lt;div class=&quot;file-actions&quot;&gt;
+                &lt;FodIconButton Icon=&quot;@FodIcons.Material.Filled.Download&quot;
+                               OnClick=&quot;DownloadFile&quot;
+                               Title=&quot;Descarcă&quot; /&gt;
+                &lt;FodIconButton Icon=&quot;@FodIcons.Material.Filled.Print&quot;
+                               OnClick=&quot;PrintFile&quot;
+                               Title=&quot;Printează&quot; /&gt;
+                &lt;FodIconButton Icon=&quot;@FodIcons.Material.Filled.Share&quot;
+                               OnClick=&quot;ShareFile&quot;
+                               Title=&quot;Partajează&quot; /&gt;
+                &lt;FodIconButton Icon=&quot;@FodIcons.Material.Filled.Close&quot;
+                               OnClick=&quot;OnCloseAsync&quot;
+                               Title=&quot;Închide&quot; /&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/HeaderTemplate&gt;
+
+    &lt;BodyTemplate&gt;
+        &lt;FodFileView @ref=&quot;baseViewer&quot; FileId=&quot;@currentFileId&quot; /&gt;
+
+        @if (showFileInfo)
+        {
+            &lt;div class=&quot;file-info-panel mt-3&quot;&gt;
+                &lt;FodText Typo=&quot;Typo.subtitle2&quot;&gt;Informații fișier&lt;/FodText&gt;
+                &lt;dl class=&quot;row&quot;&gt;
+                    &lt;dt class=&quot;col-sm-3&quot;&gt;Nume:&lt;/dt&gt;
+                    &lt;dd class=&quot;col-sm-9&quot;&gt;@fileInfo.FileName&lt;/dd&gt;
+
+                    &lt;dt class=&quot;col-sm-3&quot;&gt;Dimensiune:&lt;/dt&gt;
+                    &lt;dd class=&quot;col-sm-9&quot;&gt;@FormatFileSize(fileInfo.FileSize)&lt;/dd&gt;
+
+                    &lt;dt class=&quot;col-sm-3&quot;&gt;Tip:&lt;/dt&gt;
+                    &lt;dd class=&quot;col-sm-9&quot;&gt;@fileInfo.ContentType&lt;/dd&gt;
+
+                    &lt;dt class=&quot;col-sm-3&quot;&gt;Încărcat la:&lt;/dt&gt;
+                    &lt;dd class=&quot;col-sm-9&quot;&gt;@fileInfo.UploadDate.ToString(&quot;dd.MM.yyyy HH:mm&quot;)&lt;/dd&gt;
+                &lt;/dl&gt;
+            &lt;/div&gt;
+        }
+    &lt;/BodyTemplate&gt;
+&lt;/FodModal&gt;
+
+@code {
+    private FodFileView baseViewer;
+    private FileInfo fileInfo;
+    private Guid currentFileId;
+    private bool Show;
+    private bool showFileInfo;
+
+    [Inject] private IJSRuntime JS { get; set; }
+    [Inject] private IPrintingService PrintService { get; set; }
+
+    public async Task OpenWithInfo(Guid fileId)
+    {
+        currentFileId = fileId;
+        fileInfo = await FileService.GetFileInfo(fileId);
+        Show = true;
+        await baseViewer.OpenFileViewAsync(fileId);
+    }
+
+    private async Task DownloadFile()
+    {
+        var url = $&quot;api/fod/file-download/{currentFileId}&quot;;
+        await JS.InvokeVoidAsync(&quot;open&quot;, url, &quot;_blank&quot;);
+    }
+
+    private async Task PrintFile()
+    {
+        await PrintService.PrintFile(currentFileId);
+    }
+
+    private async Task ShareFile()
+    {
+        // Implementare partajare
+    }
+}
+</code></pre>
+<h3 id="6-stilizare-si-personalizare">6. Stilizare și Personalizare</h3>
+<pre><code class="language-css">/* Modal customization */
+.fod-modal .modal-dialog.modal-lg {
+    max-width: 90%;
+}
+
+/* Responsive iframe */
+.fod-file-view iframe {
+    width: 100%;
+    height: calc(100vh - 200px);
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image viewer enhancements */
+.fod-file-view .scaled-img {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.fod-file-view .scaled-img:hover {
+    transform: scale(1.02);
+}
+
+/* Loading state */
+.fod-file-view-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+/* File type indicators */
+.file-type-indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+</code></pre>
+<h3 id="7-integrare-cu-servicii">7. Integrare cu Servicii</h3>
+<h4 id="service-pentru-file-viewing">Service pentru file viewing</h4>
+<pre><code class="language-csharp">public interface IFileViewService
+{
+    Task&lt;FileViewModel&gt; GetFileViewModel(Guid fileId);
+    Task&lt;bool&gt; CanUserViewFile(Guid fileId, string userId);
+    Task LogFileView(Guid fileId, string userId);
+}
+
+public class FileViewService : IFileViewService
+{
+    private readonly IFileUploadService _fileService;
+    private readonly ILogger&lt;FileViewService&gt; _logger;
+
+    public async Task&lt;FileViewModel&gt; GetFileViewModel(Guid fileId)
+    {
+        var file = await _fileService.GetFileUrl(fileId);
+
+        // Adaugă metadata suplimentară
+        file.CanPrint = IsPrintable(file.FileType);
+        file.CanDownload = await CheckDownloadPermission(fileId);
+
+        return file;
+    }
+
+    private bool IsPrintable(string fileType)
+    {
+        var printableTypes = new[] { &quot;pdf&quot;, &quot;image&quot;, &quot;text&quot; };
+        return printableTypes.Any(t =&gt; fileType.Contains(t));
+    }
+}
+</code></pre>
+<h3 id="8-scenarii-de-utilizare">8. Scenarii de Utilizare</h3>
+<h4 id="document-viewer-cu-navigare">Document viewer cu navigare</h4>
+<pre><code class="language-razor">&lt;div class=&quot;document-viewer-container&quot;&gt;
+    &lt;div class=&quot;document-list&quot;&gt;
+        &lt;FodList Dense=&quot;true&quot; @bind-SelectedValue=&quot;selectedDocId&quot;&gt;
+            @foreach (var doc in documents)
+            {
+                &lt;FodListItem Value=&quot;@doc.Id.ToString()&quot;
+                             OnClick=&quot;() =&gt; ViewDocument(doc.Id)&quot;&gt;
+                    &lt;FodListItemIcon&gt;
+                        &lt;FodIcon Icon=&quot;@GetFileIcon(doc.FileType)&quot; /&gt;
+                    &lt;/FodListItemIcon&gt;
+                    &lt;FodListItemText&gt;
+                        &lt;span&gt;@doc.FileName&lt;/span&gt;
+                        &lt;small class=&quot;text-muted&quot;&gt;@doc.FileSize.ToFileSize()&lt;/small&gt;
+                    &lt;/FodListItemText&gt;
+                &lt;/FodListItem&gt;
+            }
+        &lt;/FodList&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;document-preview&quot;&gt;
+        &lt;FodFileView @ref=&quot;docViewer&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+@code {
+    private FodFileView docViewer;
+    private string selectedDocId;
+    private List&lt;Document&gt; documents;
+
+    private async Task ViewDocument(Guid docId)
+    {
+        await docViewer.OpenFileViewAsync(docId);
+    }
+
+    private string GetFileIcon(string fileType) =&gt; fileType switch
+    {
+        var t when t.Contains(&quot;pdf&quot;) =&gt; FodIcons.Material.Filled.PictureAsPdf,
+        var t when t.Contains(&quot;image&quot;) =&gt; FodIcons.Material.Filled.Image,
+        var t when t.Contains(&quot;word&quot;) =&gt; FodIcons.Material.Filled.Description,
+        _ =&gt; FodIcons.Material.Filled.InsertDriveFile
+    };
+}
+</code></pre>
+<h3 id="9-best-practices">9. Best Practices</h3>
+<ol>
+<li><strong>Securitate</strong>:</li>
+<li>Validați permisiunile înainte de afișare</li>
+<li>Folosiți token-uri pentru URL-uri sigure</li>
+<li>
+<p>Implementați audit logging</p>
+</li>
+<li>
+<p><strong>Performanță</strong>:</p>
+</li>
+<li>Lazy loading pentru fișiere mari</li>
+<li>Thumbnail-uri pentru imagini</li>
+<li>
+<p>Cache pentru fișiere frecvent accesate</p>
+</li>
+<li>
+<p><strong>UX</strong>:</p>
+</li>
+<li>Loading indicators clare</li>
+<li>Mesaje de eroare descriptive</li>
+<li>Suport pentru zoom în imagini</li>
+<li>Navigare cu keyboard</li>
+</ol>
+<h3 id="10-suport-pentru-tipuri-de-fisiere">10. Suport pentru Tipuri de Fișiere</h3>
+<pre><code class="language-csharp">public static class FileTypeSupport
+{
+    public static bool IsViewable(string fileType)
+    {
+        var viewableTypes = new[]
+        {
+            // Imagini
+            &quot;image/jpeg&quot;, &quot;image/png&quot;, &quot;image/gif&quot;, &quot;image/webp&quot;,
+            // Documente
+            &quot;application/pdf&quot;,
+            // Text
+            &quot;text/plain&quot;, &quot;text/html&quot;,
+            // Video (cu limitări)
+            &quot;video/mp4&quot;, &quot;video/webm&quot;
+        };
+
+        return viewableTypes.Contains(fileType.ToLower());
+    }
+
+    public static string GetViewerType(string fileType)
+    {
+        return fileType switch
+        {
+            var t when t.StartsWith(&quot;image/&quot;) =&gt; &quot;image&quot;,
+            &quot;application/pdf&quot; =&gt; &quot;iframe&quot;,
+            var t when t.StartsWith(&quot;video/&quot;) =&gt; &quot;video&quot;,
+            _ =&gt; &quot;download&quot;
+        };
+    }
+}
+</code></pre>
+<h3 id="11-troubleshooting">11. Troubleshooting</h3>
+<h4 id="fisierul-nu-se-afiseaza">Fișierul nu se afișează</h4>
+<ul>
+<li>Verificați că endpoint-ul API returnează fișierul</li>
+<li>Verificați Content-Type corect</li>
+<li>Verificați permisiunile utilizatorului</li>
+</ul>
+<h4 id="modal-nu-se-deschide">Modal nu se deschide</h4>
+<ul>
+<li>Verificați că <code>OpenFileViewAsync</code> este apelat</li>
+<li>Verificați că FileId este valid</li>
+<li>Verificați erori în consolă</li>
+</ul>
+<h3 id="12-limitari-si-alternative">12. Limitări și Alternative</h3>
+<p><strong>Limitări actuale</strong>:
+- Nu suportă editare
+- Suport limitat pentru formate video
+- Nu are zoom pentru PDF</p>
+<p><strong>Alternative</strong>:
+- PDF.js pentru control avansat PDF
+- ViewerJS pentru mai multe formate
+- Google Docs Viewer pentru documente Office</p>
+<h3 id="13-extensibilitate">13. Extensibilitate</h3>
+<pre><code class="language-razor">@* FileViewerWithAnnotations.razor *@
+&lt;FodFileView @ref=&quot;baseViewer&quot;&gt;
+    &lt;AdditionalContent&gt;
+        @if (IsAnnotatable)
+        {
+            &lt;div class=&quot;annotation-toolbar&quot;&gt;
+                &lt;FodButton OnClick=&quot;AddComment&quot;&gt;
+                    &lt;FodIcon Icon=&quot;@FodIcons.Material.Filled.Comment&quot; /&gt;
+                    Adaugă comentariu
+                &lt;/FodButton&gt;
+                &lt;FodButton OnClick=&quot;Highlight&quot;&gt;
+                    &lt;FodIcon Icon=&quot;@FodIcons.Material.Filled.Highlight&quot; /&gt;
+                    Evidențiază
+                &lt;/FodButton&gt;
+            &lt;/div&gt;
+        }
+    &lt;/AdditionalContent&gt;
+&lt;/FodFileView&gt;
+</code></pre>
+<h3 id="14-concluzie">14. Concluzie</h3>
+<p><code>FodFileView</code> oferă o soluție simplă și eficientă pentru vizualizarea fișierelor în aplicații Blazor. Cu suport pentru imagini și documente, integrare cu servicii de fișiere și o interfață modal responsivă, componenta acoperă majoritatea necesităților de previzualizare a documentelor.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
