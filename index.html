@@ -437,48 +437,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#securitate-si-conformitate" class="md-nav__link">
-    <span class="md-ellipsis">
-      Securitate și Conformitate
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dezvoltare-si-testare" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dezvoltare și Testare
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Dezvoltare și Testare">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mediu-de-dezvoltare" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mediu de Dezvoltare
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#testare" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testare
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#distributie" class="md-nav__link">
     <span class="md-ellipsis">
       Distribuție
@@ -539,15 +497,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#contributie" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contribuție
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -597,9 +546,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#planificat-pentru-v90" class="md-nav__link">
+  <a href="#planificat-pentru-v100" class="md-nav__link">
     <span class="md-ellipsis">
-      Planificat pentru v9.0
+      Planificat pentru v10.0
     </span>
   </a>
   
@@ -6992,48 +6941,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#securitate-si-conformitate" class="md-nav__link">
-    <span class="md-ellipsis">
-      Securitate și Conformitate
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dezvoltare-si-testare" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dezvoltare și Testare
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Dezvoltare și Testare">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mediu-de-dezvoltare" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mediu de Dezvoltare
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#testare" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testare
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#distributie" class="md-nav__link">
     <span class="md-ellipsis">
       Distribuție
@@ -7094,15 +7001,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#contributie" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contribuție
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -7152,9 +7050,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#planificat-pentru-v90" class="md-nav__link">
+  <a href="#planificat-pentru-v100" class="md-nav__link">
     <span class="md-ellipsis">
-      Planificat pentru v9.0
+      Planificat pentru v10.0
     </span>
   </a>
   
@@ -7289,72 +7187,23 @@
 <li>Componente lazy-loaded pentru încărcare rapidă</li>
 <li>Bundle-uri optimizate pentru producție</li>
 <li>Caching inteligent pentru resurse statice</li>
-<li>Suport pentru Server-Side Rendering (SSR)</li>
 </ul>
 <h2 id="integrari-guvernamentale">Integrări Guvernamentale</h2>
 <h3 id="mpass-autentificare-unificata">MPass - Autentificare Unificată</h3>
 <p>Integrare completă cu sistemul național de autentificare:</p>
-<pre><code class="language-csharp">services.AddFodMPass(options =&gt; {
-    options.ClientId = &quot;your-client-id&quot;;
-    options.ClientSecret = &quot;your-secret&quot;;
-});
-</code></pre>
 <h3 id="mpay-plati-electronice">MPay - Plăți Electronice</h3>
-<p>Procesare securizată a plăților guvernamentale:</p>
-<pre><code class="language-csharp">services.AddFodMPay(options =&gt; {
-    options.MerchantId = &quot;gov-merchant-id&quot;;
-    options.ApiKey = &quot;secure-api-key&quot;;
-});
-</code></pre>
+<p>Procesare securizată a plăților guvernamentale</p>
 <h3 id="mdelivery-livrare-electronica">MDelivery - Livrare Electronică</h3>
 <p>Distribuție digitală a documentelor oficiale:</p>
-<pre><code class="language-csharp">services.AddFodMDelivery(options =&gt; {
-    options.ServiceEndpoint = &quot;https://mdelivery.gov.md&quot;;
-});
-</code></pre>
-<h2 id="securitate-si-conformitate">Securitate și Conformitate</h2>
-<p>FOD implementează cele mai înalte standarde de securitate:
-- Protecție CSRF integrată
-- Validare XSS pe toate input-urile
-- Conformitate GDPR pentru date personale
-- Audit trail pentru toate acțiunile critice
-- Suport pentru Content Security Policy (CSP)</p>
-<h2 id="dezvoltare-si-testare">Dezvoltare și Testare</h2>
-<h3 id="mediu-de-dezvoltare">Mediu de Dezvoltare</h3>
-<pre><code class="language-bash"># Clonare repository
-git clone https://github.com/egov-moldova/fod-components.git
-
-# Restaurare dependențe
-dotnet restore src/FOD.Components.sln
-
-# Construire proiect
-dotnet build src/FOD.Components.sln
-
-# Rulare site documentație
-dotnet run --project src/FOD.Docs/Server/FOD.Docs.Server.csproj
-</code></pre>
-<h3 id="testare">Testare</h3>
-<p>FOD utilizează o suită completă de teste:
-- <strong>xUnit</strong> pentru teste unitare
-- <strong>NSubstitute</strong> pentru mock-uri
-- <strong>FluentAssertions</strong> pentru aserțiuni expresive
-- Acoperire cod &gt;80%</p>
-<pre><code class="language-bash"># Rulare toate testele
-dotnet test test/FOD.Components.Tests.sln
-
-# Cu acoperire cod
-dotnet test --collect:&quot;XPlat Code Coverage&quot;
-</code></pre>
 <h2 id="distributie">Distribuție</h2>
 <h3 id="nuget-package">NuGet Package</h3>
-<p>FOD este disponibil ca pachet NuGet:</p>
+<p>FOD este disponibil ca pachet NuGet la solicitare:</p>
 <pre><code class="language-xml">&lt;PackageReference Include=&quot;FOD.Components&quot; Version=&quot;8.2.156&quot; /&gt;
 </code></pre>
 <h3 id="cicd-pipeline">CI/CD Pipeline</h3>
 <ul>
 <li>Build automat pe fiecare commit</li>
 <li>Publicare automată pe Azure DevOps Artifacts</li>
-<li>Versionare semantică (MAJOR.MINOR.PATCH)</li>
 </ul>
 <h2 id="documentatie-si-resurse">Documentație și Resurse</h2>
 <h3 id="site-documentatie">Site Documentație</h3>
@@ -7367,40 +7216,25 @@ dotnet test --collect:&quot;XPlat Code Coverage&quot;
 - API reference complet
 - Ghid de stil și best practices
 - Cazuri de utilizare comune</p>
-<h3 id="contributie">Contribuție</h3>
-<p>FOD este un proiect open-source. Contribuțiile sunt binevenite:
-1. Fork repository-ul
-2. Creează o ramură pentru feature (<code>git checkout -b feature/AmazingFeature</code>)
-3. Commit modificările (<code>git commit -m 'Add AmazingFeature'</code>)
-4. Push pe ramură (<code>git push origin feature/AmazingFeature</code>)
-5. Deschide un Pull Request</p>
 <h2 id="suport-si-comunitate">Suport și Comunitate</h2>
 <h3 id="canale-de-suport">Canale de Suport</h3>
 <ul>
-<li><strong>GitHub Issues</strong> - Pentru raportare bug-uri și cereri de funcționalități</li>
 <li><strong>Email</strong> - support@egov.md pentru asistență oficială</li>
-<li><strong>Forum</strong> - Comunitatea dezvoltatorilor guvernamentali</li>
 </ul>
 <h3 id="versiuni-suportate">Versiuni Suportate</h3>
 <ul>
 <li><strong>v8.x</strong> - Versiune curentă cu suport activ</li>
-<li><strong>v7.x</strong> - Suport de securitate până în 2025</li>
-<li><strong>v6.x</strong> - End of Life</li>
 </ul>
 <h2 id="roadmap">Roadmap</h2>
-<h3 id="planificat-pentru-v90">Planificat pentru v9.0</h3>
+<h3 id="planificat-pentru-v100">Planificat pentru v10.0</h3>
 <ul>
-<li>Migrare la .NET 9</li>
-<li>Componente AI-powered pentru formulare inteligente</li>
-<li>Integrare cu servicii cloud guvernamentale</li>
+<li>Migrare la .NET 10</li>
 <li>Îmbunătățiri performanță WebAssembly</li>
 </ul>
 <h3 id="viziune-pe-termen-lung">Viziune pe Termen Lung</h3>
 <ul>
-<li>Extindere la React și Angular</li>
-<li>Marketplace pentru componente comunitare</li>
 <li>Generator automat de aplicații CRUD</li>
-<li>Integrare cu toate serviciile e-Gov</li>
+<li>Integrare cu toate serviciile AGE</li>
 </ul>
 <h2 id="licenta">Licență</h2>
 <p>FOD este licențiat sub MIT License, permițând utilizare liberă în proiecte guvernamentale și comerciale.</p>
