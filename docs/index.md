@@ -91,81 +91,22 @@ Toate componentele și mesajele sunt traduse automat bazat pe cultura curentă.
 - Componente lazy-loaded pentru încărcare rapidă
 - Bundle-uri optimizate pentru producție
 - Caching inteligent pentru resurse statice
-- Suport pentru Server-Side Rendering (SSR)
 
 ## Integrări Guvernamentale
 
 ### MPass - Autentificare Unificată
 Integrare completă cu sistemul național de autentificare:
-```csharp
-services.AddFodMPass(options => {
-    options.ClientId = "your-client-id";
-    options.ClientSecret = "your-secret";
-});
-```
 
 ### MPay - Plăți Electronice
-Procesare securizată a plăților guvernamentale:
-```csharp
-services.AddFodMPay(options => {
-    options.MerchantId = "gov-merchant-id";
-    options.ApiKey = "secure-api-key";
-});
-```
+Procesare securizată a plăților guvernamentale
 
 ### MDelivery - Livrare Electronică
 Distribuție digitală a documentelor oficiale:
-```csharp
-services.AddFodMDelivery(options => {
-    options.ServiceEndpoint = "https://mdelivery.gov.md";
-});
-```
-
-## Securitate și Conformitate
-
-FOD implementează cele mai înalte standarde de securitate:
-- Protecție CSRF integrată
-- Validare XSS pe toate input-urile
-- Conformitate GDPR pentru date personale
-- Audit trail pentru toate acțiunile critice
-- Suport pentru Content Security Policy (CSP)
-
-## Dezvoltare și Testare
-
-### Mediu de Dezvoltare
-```bash
-# Clonare repository
-git clone https://github.com/egov-moldova/fod-components.git
-
-# Restaurare dependențe
-dotnet restore src/FOD.Components.sln
-
-# Construire proiect
-dotnet build src/FOD.Components.sln
-
-# Rulare site documentație
-dotnet run --project src/FOD.Docs/Server/FOD.Docs.Server.csproj
-```
-
-### Testare
-FOD utilizează o suită completă de teste:
-- **xUnit** pentru teste unitare
-- **NSubstitute** pentru mock-uri
-- **FluentAssertions** pentru aserțiuni expresive
-- Acoperire cod >80%
-
-```bash
-# Rulare toate testele
-dotnet test test/FOD.Components.Tests.sln
-
-# Cu acoperire cod
-dotnet test --collect:"XPlat Code Coverage"
-```
 
 ## Distribuție
 
 ### NuGet Package
-FOD este disponibil ca pachet NuGet:
+FOD este disponibil ca pachet NuGet la solicitare:
 ```xml
 <PackageReference Include="FOD.Components" Version="8.2.156" />
 ```
@@ -173,7 +114,6 @@ FOD este disponibil ca pachet NuGet:
 ### CI/CD Pipeline
 - Build automat pe fiecare commit
 - Publicare automată pe Azure DevOps Artifacts
-- Versionare semantică (MAJOR.MINOR.PATCH)
 
 ## Documentație și Resurse
 
@@ -189,39 +129,24 @@ Fiecare componentă include:
 - Ghid de stil și best practices
 - Cazuri de utilizare comune
 
-### Contribuție
-FOD este un proiect open-source. Contribuțiile sunt binevenite:
-1. Fork repository-ul
-2. Creează o ramură pentru feature (`git checkout -b feature/AmazingFeature`)
-3. Commit modificările (`git commit -m 'Add AmazingFeature'`)
-4. Push pe ramură (`git push origin feature/AmazingFeature`)
-5. Deschide un Pull Request
 
 ## Suport și Comunitate
 
 ### Canale de Suport
-- **GitHub Issues** - Pentru raportare bug-uri și cereri de funcționalități
 - **Email** - support@egov.md pentru asistență oficială
-- **Forum** - Comunitatea dezvoltatorilor guvernamentali
 
 ### Versiuni Suportate
 - **v8.x** - Versiune curentă cu suport activ
-- **v7.x** - Suport de securitate până în 2025
-- **v6.x** - End of Life
 
 ## Roadmap
 
-### Planificat pentru v9.0
-- Migrare la .NET 9
-- Componente AI-powered pentru formulare inteligente
-- Integrare cu servicii cloud guvernamentale
+### Planificat pentru v10.0
+- Migrare la .NET 10
 - Îmbunătățiri performanță WebAssembly
 
 ### Viziune pe Termen Lung
-- Extindere la React și Angular
-- Marketplace pentru componente comunitare
 - Generator automat de aplicații CRUD
-- Integrare cu toate serviciile e-Gov
+- Integrare cu toate serviciile AGE
 
 ## Licență
 
