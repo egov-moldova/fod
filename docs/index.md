@@ -1,8 +1,8 @@
-# FOD - Framework for Open Digital
+# FOD - FrontOffice Digitization
 
 ## Prezentare Generală
 
-FOD (Framework for Open Digital) reprezintă o bibliotecă comprehensivă de componente Blazor dezvoltată special pentru serviciile digitale guvernamentale din Republica Moldova. Această platformă oferă o colecție standardizată de componente UI reutilizabile, asigurând consistență vizuală și funcțională în toate aplicațiile guvernamentale digitale.
+FOD (FrontOffice Digitization) reprezintă o bibliotecă comprehensivă de componente Blazor dezvoltată special pentru serviciile digitale guvernamentale din Republica Moldova. Această platformă oferă o colecție standardizată de componente UI reutilizabile, asigurând consistență vizuală și funcțională în toate aplicațiile guvernamentale digitale.
 
 ## Obiectiv Principal
 
