@@ -6710,15 +6710,75 @@
 <li><strong>Performanță</strong>: Reduce semnificativ memoria utilizată pentru operațiuni de listare și căutare</li>
 </ul>
 <h2 id="proprietati">Proprietăți</h2>
-<p>| Proprietate | Tip | Descriere | Constrângeri | Considerări Tehnice |
-| Id | Guid | Identificator unic al conținutului | Primary Key, moștenit din BaseEntity | - |
-| File_Content | byte[] | Conținutul binar al fișierului | Obligatoriu | Max 2GB (limita varbinary(max)), recomandare: max 50MB |
-| CreateDate | DateTime? | Data încărcării conținutului | Moștenit din BaseEntity | Folosit pentru politici de retenție |
-| UpdateDate | DateTime? | Data ultimei modificări | Moștenit din BaseEntity | - |
-| CreateUserId | string? | ID-ul utilizatorului care a încărcat | Moștenit din BaseEntity | - |
-| UpdateUserId | string? | ID-ul utilizatorului care a modificat | Moștenit din BaseEntity | - |
-| CreateUserName | string? | Numele utilizatorului care a încărcat | Moștenit din BaseEntity | - |
-| UpdateUserName | string? | Numele utilizatorului care a modificat | Moștenit din BaseEntity | - |</p>
+<table>
+<thead>
+<tr>
+<th>Proprietate</th>
+<th>Tip</th>
+<th>Descriere</th>
+<th>Constrângeri</th>
+<th>Considerări Tehnice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td>Guid</td>
+<td>Identificator unic al conținutului</td>
+<td>Primary Key, moștenit din BaseEntity</td>
+<td>-</td>
+</tr>
+<tr>
+<td>File_Content</td>
+<td>byte[]</td>
+<td>Conținutul binar al fișierului</td>
+<td>Obligatoriu</td>
+<td>Max 2GB (limita varbinary(max)), recomandare: max 50MB</td>
+</tr>
+<tr>
+<td>CreateDate</td>
+<td>DateTime?</td>
+<td>Data încărcării conținutului</td>
+<td>Moștenit din BaseEntity</td>
+<td>Folosit pentru politici de retenție</td>
+</tr>
+<tr>
+<td>UpdateDate</td>
+<td>DateTime?</td>
+<td>Data ultimei modificări</td>
+<td>Moștenit din BaseEntity</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CreateUserId</td>
+<td>string?</td>
+<td>ID-ul utilizatorului care a încărcat</td>
+<td>Moștenit din BaseEntity</td>
+<td>-</td>
+</tr>
+<tr>
+<td>UpdateUserId</td>
+<td>string?</td>
+<td>ID-ul utilizatorului care a modificat</td>
+<td>Moștenit din BaseEntity</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CreateUserName</td>
+<td>string?</td>
+<td>Numele utilizatorului care a încărcat</td>
+<td>Moștenit din BaseEntity</td>
+<td>-</td>
+</tr>
+<tr>
+<td>UpdateUserName</td>
+<td>string?</td>
+<td>Numele utilizatorului care a modificat</td>
+<td>Moștenit din BaseEntity</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
 <h2 id="relatii">Relații</h2>
 <h3 id="relatii-inverse-unde-este-referentiat">Relații Inverse (unde este referențiat)</h3>
 <ul>
