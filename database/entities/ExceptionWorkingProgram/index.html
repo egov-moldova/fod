@@ -5204,6 +5204,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ExceptionWorkingProgram
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -5215,6 +5228,94 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descriere" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriere
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proprietati" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proprietăți
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatii" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relații
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilizare" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilizare
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilizare">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplu-de-definire-a-unei-zile-libere" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplu de definire a unei zile libere
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplu-de-definire-a-unui-orar-special" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplu de definire a unui orar special
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note importante
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -6375,6 +6476,83 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descriere" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriere
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proprietati" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proprietăți
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatii" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relații
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilizare" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilizare
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilizare">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplu-de-definire-a-unei-zile-libere" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplu de definire a unei zile libere
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplu-de-definire-a-unui-orar-special" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplu de definire a unui orar special
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note importante
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -6390,37 +6568,78 @@
 
 
 <h1 id="exceptionworkingprogram">ExceptionWorkingProgram</h1>
-<p><strong>Description:</strong> </p>
+<h2 id="descriere">Descriere</h2>
+<p>Entitatea <code>ExceptionWorkingProgram</code> reprezintă excepțiile de la programul de lucru standard, definind zile speciale cu orar diferit sau zile libere. Aceasta permite configurarea flexibilă a orarului pentru sărbători, evenimente speciale sau alte situații excepționale.</p>
+<h2 id="proprietati">Proprietăți</h2>
 <table>
 <thead>
 <tr>
-<th>Property</th>
-<th>Type</th>
+<th>Proprietate</th>
+<th>Tip</th>
+<th>Descriere</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Date</td>
-<td>DateTime</td>
+<td><code>Date</code></td>
+<td><code>DateTime</code></td>
+<td>Data pentru care se aplică excepția</td>
 </tr>
 <tr>
-<td>OpenHours</td>
-<td>int?</td>
+<td><code>OpenHours</code></td>
+<td><code>int?</code></td>
+<td>Ora de deschidere (format 24h, nullable pentru zile închise)</td>
 </tr>
 <tr>
-<td>OpenMinutes</td>
-<td>int?</td>
+<td><code>OpenMinutes</code></td>
+<td><code>int?</code></td>
+<td>Minutele pentru ora de deschidere</td>
 </tr>
 <tr>
-<td>CloseHours</td>
-<td>int?</td>
+<td><code>CloseHours</code></td>
+<td><code>int?</code></td>
+<td>Ora de închidere (format 24h)</td>
 </tr>
 <tr>
-<td>CloseMinutes</td>
-<td>int?</td>
+<td><code>CloseMinutes</code></td>
+<td><code>int?</code></td>
+<td>Minutele pentru ora de închidere</td>
 </tr>
 </tbody>
 </table>
+<h2 id="relatii">Relații</h2>
+<ul>
+<li><strong>WorkingProgram</strong> - Program de lucru principal pentru care se definește excepția</li>
+<li><strong>Department</strong> - Departamentul care aplică această excepție de orar</li>
+</ul>
+<h2 id="utilizare">Utilizare</h2>
+<h3 id="exemplu-de-definire-a-unei-zile-libere">Exemplu de definire a unei zile libere</h3>
+<pre><code class="language-csharp">var exceptie = new ExceptionWorkingProgram
+{
+    Date = new DateTime(2024, 12, 25), // Crăciun
+    OpenHours = null,    // Închis
+    OpenMinutes = null,
+    CloseHours = null,
+    CloseMinutes = null
+};
+</code></pre>
+<h3 id="exemplu-de-definire-a-unui-orar-special">Exemplu de definire a unui orar special</h3>
+<pre><code class="language-csharp">var exceptie = new ExceptionWorkingProgram
+{
+    Date = new DateTime(2024, 12, 24), // Ajun de Crăciun
+    OpenHours = 9,
+    OpenMinutes = 0,
+    CloseHours = 14,     // Închidere devreme
+    CloseMinutes = 0
+};
+</code></pre>
+<h2 id="note-importante">Note importante</h2>
+<ul>
+<li>Valorile <code>null</code> pentru orele de deschidere indică o zi liberă</li>
+<li>Excepțiile au prioritate față de programul de lucru standard</li>
+<li>Este recomandat să se verifice existența excepțiilor înainte de afișarea orarului standard</li>
+<li>Data excepției trebuie să fie unică pentru fiecare program de lucru</li>
+</ul>
 
 
 
