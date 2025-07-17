@@ -14,6 +14,7 @@ Entitate care stochează metadatele fișierelor încărcate în sistemul FOD. Se
 ## Proprietăți
 
 | Proprietate | Tip | Descriere | Constrângeri | Validări |
+|------------|-----|-----------|--------------|----------|
 | Id | Guid | Identificator unic al fișierului | Primary Key, moștenit din BaseEntity | - |
 | File_Name | string | Numele original al fișierului | Obligatoriu | Max 255 caractere, caractere valide pentru sistem de fișiere |
 | File_Type | string | Tipul MIME al fișierului (ex: application/pdf) | Obligatoriu | Trebuie să fie din lista tipurilor acceptate |

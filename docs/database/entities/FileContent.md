@@ -14,6 +14,7 @@ Entitate care stochează conținutul efectiv (binary) al fișierelor în sistemu
 ## Proprietăți
 
 | Proprietate | Tip | Descriere | Constrângeri | Considerări Tehnice |
+|------------|-----|-----------|--------------|---------------------|
 | Id | Guid | Identificator unic al conținutului | Primary Key, moștenit din BaseEntity | - |
 | File_Content | byte[] | Conținutul binar al fișierului | Obligatoriu | Max 2GB (limita varbinary(max)), recomandare: max 50MB |
 | CreateDate | DateTime? | Data încărcării conținutului | Moștenit din BaseEntity | Folosit pentru politici de retenție |
